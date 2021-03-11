@@ -1,20 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using CADPhoneCase;
+using Kompas6API5;
+using Kompas6Constants3D;
 
 namespace CADPhoneCaseUI
 {
     public partial class MainForm : Form
     {
+        public KompasInteractor _kompas;
+
         public MainForm()
         {
             InitializeComponent();
+            _kompas = new KompasInteractor();
+        }
+
+        private void CreateModelButton_Click(object sender, EventArgs e)
+        {
+            _kompas.OpenKompas();
+            var _model = new PhoneCaseModeling(_kompas.Kompas);
+            _model.CreateModel();
         }
     }
 }
