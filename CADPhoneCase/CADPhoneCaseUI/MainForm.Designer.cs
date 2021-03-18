@@ -66,240 +66,268 @@ namespace CADPhoneCaseUI
             this.CreateBodelButton.Name = "CreateBodelButton";
             this.CreateBodelButton.Size = new System.Drawing.Size(100, 23);
             this.CreateBodelButton.TabIndex = 15;
-            this.CreateBodelButton.Text = "Create model";
+            this.CreateBodelButton.Text = "Построить";
             this.CreateBodelButton.UseVisualStyleBackColor = true;
             this.CreateBodelButton.Click += new System.EventHandler(this.CreateModelButton_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(118, 22);
+            this.label1.Location = new System.Drawing.Point(88, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Case length";
+            this.label1.Text = "Длина чехла";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(118, 48);
+            this.label2.Location = new System.Drawing.Point(88, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.Size = new System.Drawing.Size(77, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Case width";
+            this.label2.Text = "Ширина чехла";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(118, 74);
+            this.label3.Location = new System.Drawing.Point(88, 74);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
+            this.label3.Size = new System.Drawing.Size(76, 13);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Case height";
+            this.label3.Text = "Высота чехла";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(118, 100);
+            this.label4.Location = new System.Drawing.Point(88, 100);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 13);
+            this.label4.Size = new System.Drawing.Size(165, 13);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Camera hole width";
+            this.label4.Text = "Ширина отверстия для камеры";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(118, 126);
+            this.label5.Location = new System.Drawing.Point(88, 126);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 13);
+            this.label5.Size = new System.Drawing.Size(159, 13);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Camera hole lenght";
+            this.label5.Text = "Длина отверстия для камеры";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(118, 152);
+            this.label6.Location = new System.Drawing.Point(88, 149);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(170, 26);
             this.label6.TabIndex = 6;
-            this.label6.Text = "The gap between the camera hole\r\nand the right wall of the case";
+            this.label6.Text = "Зазор между отверстием для \r\nкамеры и правой стенкой чехла";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(118, 182);
+            this.label7.Location = new System.Drawing.Point(88, 179);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(170, 26);
+            this.label7.Size = new System.Drawing.Size(175, 26);
             this.label7.TabIndex = 7;
-            this.label7.Text = "The gap between the camera hole\r\nand the top wall of the case";
+            this.label7.Text = "Зазор между отверстием для \r\nкамеры и верхней стенкой чехла";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(404, 22);
+            this.label8.Location = new System.Drawing.Point(374, 22);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 13);
+            this.label8.Size = new System.Drawing.Size(167, 13);
             this.label8.TabIndex = 8;
-            this.label8.Text = "Charging hole width";
+            this.label8.Text = "Ширина отверстия для зарядки";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(404, 48);
+            this.label9.Location = new System.Drawing.Point(374, 48);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(104, 13);
+            this.label9.Size = new System.Drawing.Size(166, 13);
             this.label9.TabIndex = 9;
-            this.label9.Text = "Charging hole height";
+            this.label9.Text = "Высота отверстия для зарядки";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(404, 156);
+            this.label10.Location = new System.Drawing.Point(374, 156);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(129, 13);
+            this.label10.Size = new System.Drawing.Size(187, 13);
             this.label10.TabIndex = 10;
-            this.label10.Text = "Headphone hole diameter";
+            this.label10.Text = "Диаметр отверстия для наушников";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(404, 182);
+            this.label11.Location = new System.Drawing.Point(374, 179);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(189, 26);
+            this.label11.Size = new System.Drawing.Size(200, 26);
             this.label11.TabIndex = 11;
-            this.label11.Text = "The gap between the headphone hole\r\nand the left side of the case";
+            this.label11.Text = "Зазор между отверстием \r\nдля наушников и левой стенкой чехла";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(404, 74);
+            this.label12.Location = new System.Drawing.Point(374, 74);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(202, 13);
+            this.label12.Size = new System.Drawing.Size(206, 13);
             this.label12.TabIndex = 12;
-            this.label12.Text = "Height of the opening for the side buttons";
+            this.label12.Text = "Высота отверстия для боковых кнопок";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(404, 100);
+            this.label13.Location = new System.Drawing.Point(374, 100);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(199, 13);
+            this.label13.Size = new System.Drawing.Size(207, 13);
             this.label13.TabIndex = 13;
-            this.label13.Text = "Width of the opening for the side buttons";
+            this.label13.Text = "Ширина отверстия для боковых кнопок";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(404, 126);
+            this.label14.Location = new System.Drawing.Point(374, 123);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(190, 26);
+            this.label14.Size = new System.Drawing.Size(220, 26);
             this.label14.TabIndex = 14;
-            this.label14.Text = "The gap between the hole for the side \r\nbuttons and the upper right corner";
+            this.label14.Text = "Зазор между отверстием для \r\nбоковых кнопок и верхним правым углом";
             // 
             // ATextBox
             // 
             this.ATextBox.Location = new System.Drawing.Point(12, 19);
             this.ATextBox.Name = "ATextBox";
-            this.ATextBox.Size = new System.Drawing.Size(100, 20);
+            this.ATextBox.Size = new System.Drawing.Size(70, 20);
             this.ATextBox.TabIndex = 1;
+            this.ATextBox.Text = "200";
+            this.ATextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
             // BTextBox
             // 
             this.BTextBox.Location = new System.Drawing.Point(12, 45);
             this.BTextBox.Name = "BTextBox";
-            this.BTextBox.Size = new System.Drawing.Size(100, 20);
+            this.BTextBox.Size = new System.Drawing.Size(70, 20);
             this.BTextBox.TabIndex = 2;
+            this.BTextBox.Text = "100";
+            this.BTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
             // HTextBox
             // 
             this.HTextBox.Location = new System.Drawing.Point(12, 71);
             this.HTextBox.Name = "HTextBox";
-            this.HTextBox.Size = new System.Drawing.Size(100, 20);
+            this.HTextBox.Size = new System.Drawing.Size(70, 20);
             this.HTextBox.TabIndex = 3;
+            this.HTextBox.Text = "15";
+            this.HTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
             // A1TextBox
             // 
             this.A1TextBox.Location = new System.Drawing.Point(12, 97);
             this.A1TextBox.Name = "A1TextBox";
-            this.A1TextBox.Size = new System.Drawing.Size(100, 20);
+            this.A1TextBox.Size = new System.Drawing.Size(70, 20);
             this.A1TextBox.TabIndex = 4;
+            this.A1TextBox.Text = "20";
+            this.A1TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
             // B1TextBox
             // 
             this.B1TextBox.Location = new System.Drawing.Point(12, 123);
             this.B1TextBox.Name = "B1TextBox";
-            this.B1TextBox.Size = new System.Drawing.Size(100, 20);
+            this.B1TextBox.Size = new System.Drawing.Size(70, 20);
             this.B1TextBox.TabIndex = 5;
+            this.B1TextBox.Text = "30";
+            this.B1TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
             // S0TextBox
             // 
             this.S0TextBox.Location = new System.Drawing.Point(12, 149);
             this.S0TextBox.Name = "S0TextBox";
-            this.S0TextBox.Size = new System.Drawing.Size(100, 20);
+            this.S0TextBox.Size = new System.Drawing.Size(70, 20);
             this.S0TextBox.TabIndex = 6;
+            this.S0TextBox.Text = "20";
+            this.S0TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
             // S1TextBox
             // 
             this.S1TextBox.Location = new System.Drawing.Point(12, 179);
             this.S1TextBox.Name = "S1TextBox";
-            this.S1TextBox.Size = new System.Drawing.Size(100, 20);
+            this.S1TextBox.Size = new System.Drawing.Size(70, 20);
             this.S1TextBox.TabIndex = 7;
+            this.S1TextBox.Text = "20";
+            this.S1TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
             // A2TextBox
             // 
             this.A2TextBox.Location = new System.Drawing.Point(298, 19);
             this.A2TextBox.Name = "A2TextBox";
-            this.A2TextBox.Size = new System.Drawing.Size(100, 20);
+            this.A2TextBox.Size = new System.Drawing.Size(70, 20);
             this.A2TextBox.TabIndex = 8;
+            this.A2TextBox.Text = "15";
+            this.A2TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
             // B2TextBox
             // 
             this.B2TextBox.Location = new System.Drawing.Point(298, 45);
             this.B2TextBox.Name = "B2TextBox";
-            this.B2TextBox.Size = new System.Drawing.Size(100, 20);
+            this.B2TextBox.Size = new System.Drawing.Size(70, 20);
             this.B2TextBox.TabIndex = 9;
+            this.B2TextBox.Text = "5";
+            this.B2TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
             // DTextBox
             // 
             this.DTextBox.Location = new System.Drawing.Point(298, 153);
             this.DTextBox.Name = "DTextBox";
-            this.DTextBox.Size = new System.Drawing.Size(100, 20);
+            this.DTextBox.Size = new System.Drawing.Size(70, 20);
             this.DTextBox.TabIndex = 13;
+            this.DTextBox.Text = "4";
+            this.DTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
             // S2TextBox
             // 
             this.S2TextBox.Location = new System.Drawing.Point(298, 179);
             this.S2TextBox.Name = "S2TextBox";
-            this.S2TextBox.Size = new System.Drawing.Size(100, 20);
+            this.S2TextBox.Size = new System.Drawing.Size(70, 20);
             this.S2TextBox.TabIndex = 14;
+            this.S2TextBox.Text = "5";
+            this.S2TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
             // A3TextBox
             // 
             this.A3TextBox.Location = new System.Drawing.Point(298, 71);
             this.A3TextBox.Name = "A3TextBox";
-            this.A3TextBox.Size = new System.Drawing.Size(100, 20);
+            this.A3TextBox.Size = new System.Drawing.Size(70, 20);
             this.A3TextBox.TabIndex = 10;
+            this.A3TextBox.Text = "4";
+            this.A3TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
             // B3TextBox
             // 
             this.B3TextBox.Location = new System.Drawing.Point(298, 97);
             this.B3TextBox.Name = "B3TextBox";
-            this.B3TextBox.Size = new System.Drawing.Size(100, 20);
+            this.B3TextBox.Size = new System.Drawing.Size(70, 20);
             this.B3TextBox.TabIndex = 11;
+            this.B3TextBox.Text = "20";
+            this.B3TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
             // S3TextBox
             // 
             this.S3TextBox.Location = new System.Drawing.Point(298, 123);
             this.S3TextBox.Name = "S3TextBox";
-            this.S3TextBox.Size = new System.Drawing.Size(100, 20);
+            this.S3TextBox.Size = new System.Drawing.Size(70, 20);
             this.S3TextBox.TabIndex = 12;
+            this.S3TextBox.Text = "20";
+            this.S3TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(608, 263);
+            this.ClientSize = new System.Drawing.Size(634, 263);
             this.Controls.Add(this.S3TextBox);
             this.Controls.Add(this.B3TextBox);
             this.Controls.Add(this.A3TextBox);
@@ -331,8 +359,8 @@ namespace CADPhoneCaseUI
             this.Controls.Add(this.CreateBodelButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(624, 298);
-            this.MinimumSize = new System.Drawing.Size(624, 298);
+            this.MaximumSize = new System.Drawing.Size(650, 298);
+            this.MinimumSize = new System.Drawing.Size(650, 298);
             this.Name = "MainForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
