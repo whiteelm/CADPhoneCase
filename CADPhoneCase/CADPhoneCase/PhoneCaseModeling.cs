@@ -73,24 +73,29 @@ namespace CADPhoneCase
             _doc3D.Create();
             _doc3D = (ksDocument3D)_kompas.ActiveDocument3D();
             _part = (ksPart)_doc3D.GetPart((short)Part_Type.pTop_Part);
+
             //Создание основы чехла
             var currentPlane = (ksEntity)_part.GetDefaultEntity((short)Obj3dType.o3d_planeXOY);
             DrawRectangle(caseLength, caseWidth, 0, 0, currentPlane);
             MakeExtrude(caseHeight, _entitySketch);
             MakeShell();
+
             //Создание отверстия для камеры
             currentPlane = (ksEntity)_part.GetDefaultEntity((short)Obj3dType.o3d_planeXOY);
             DrawRectangle(cameraHoleLength, cameraHoleWidth, cameraRightGap, cameraTopGap, currentPlane);
             MakeCutExtrude(_entitySketch, (short)Direction_Type.dtReverse);
+
             //Создание отверстия для боковых кнопок
             currentPlane = (ksEntity)_part.GetDefaultEntity((short)Obj3dType.o3d_planeYOZ);
             DrawRectangle(-sideButtonsHoleWidth, -sideButtonsHoleHeight, centerHeight + sideButtonsHoleHeight/2,
                 -sideButtonsGap, currentPlane);
             MakeCutExtrude(_entitySketch, (short)Direction_Type.dtNormal);
+
             //Создание отверстия для наушников
             var offsetPlaneXOZ = CreateOffsetPlaneXOZ(caseLength);
             DrawCircle(caseWidth- jackGap, centerHeight, jackDiameter, offsetPlaneXOZ);
             MakeCutExtrude(_entitySketch, (short)Direction_Type.dtNormal);
+
             //Создание отверстия для зарядки
             DrawRectangle(chargerHoleHeight, chargerHoleWidth, -chargerHoleWidth/2 + caseWidth / 2, 
                 centerHeight - chargerHoleHeight/2, offsetPlaneXOZ);
