@@ -44,20 +44,20 @@ namespace CADPhoneCaseUI
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.ATextBox = new System.Windows.Forms.TextBox();
-            this.BTextBox = new System.Windows.Forms.TextBox();
-            this.HTextBox = new System.Windows.Forms.TextBox();
-            this.A1TextBox = new System.Windows.Forms.TextBox();
-            this.B1TextBox = new System.Windows.Forms.TextBox();
-            this.S0TextBox = new System.Windows.Forms.TextBox();
-            this.S1TextBox = new System.Windows.Forms.TextBox();
-            this.A2TextBox = new System.Windows.Forms.TextBox();
-            this.B2TextBox = new System.Windows.Forms.TextBox();
-            this.DTextBox = new System.Windows.Forms.TextBox();
-            this.S2TextBox = new System.Windows.Forms.TextBox();
-            this.A3TextBox = new System.Windows.Forms.TextBox();
-            this.B3TextBox = new System.Windows.Forms.TextBox();
-            this.S3TextBox = new System.Windows.Forms.TextBox();
+            this.CaseLengthTextBox = new System.Windows.Forms.TextBox();
+            this.CaseWidthTextBox = new System.Windows.Forms.TextBox();
+            this.CaseHeightTextBox = new System.Windows.Forms.TextBox();
+            this.CameraHoleWidthTextBox = new System.Windows.Forms.TextBox();
+            this.CameraHoleLengthTextBox = new System.Windows.Forms.TextBox();
+            this.CameraRightGapTextBox = new System.Windows.Forms.TextBox();
+            this.CameraTopGapTextBox = new System.Windows.Forms.TextBox();
+            this.ChargerHoleWidthTextBox = new System.Windows.Forms.TextBox();
+            this.ChargerHoleHeightTextBox = new System.Windows.Forms.TextBox();
+            this.MiniJackDiameterTextBox = new System.Windows.Forms.TextBox();
+            this.MiniJackGapTextBox = new System.Windows.Forms.TextBox();
+            this.SideButtonsHoleHeightTextBox = new System.Windows.Forms.TextBox();
+            this.SideButtonsHoleWidthTextBox = new System.Windows.Forms.TextBox();
+            this.SideButtonsGapTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // CreateBodelButton
@@ -197,151 +197,151 @@ namespace CADPhoneCaseUI
             this.label14.TabIndex = 14;
             this.label14.Text = "Зазор между отверстием для \r\nбоковых кнопок и верхним правым углом";
             // 
-            // ATextBox
+            // CaseLengthTextBox
             // 
-            this.ATextBox.Location = new System.Drawing.Point(12, 19);
-            this.ATextBox.Name = "ATextBox";
-            this.ATextBox.Size = new System.Drawing.Size(70, 20);
-            this.ATextBox.TabIndex = 1;
-            this.ATextBox.Text = "200";
-            this.ATextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
+            this.CaseLengthTextBox.Location = new System.Drawing.Point(12, 19);
+            this.CaseLengthTextBox.Name = "CaseLengthTextBox";
+            this.CaseLengthTextBox.Size = new System.Drawing.Size(70, 20);
+            this.CaseLengthTextBox.TabIndex = 1;
+            this.CaseLengthTextBox.Text = "200";
+            this.CaseLengthTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
-            // BTextBox
+            // CaseWidthTextBox
             // 
-            this.BTextBox.Location = new System.Drawing.Point(12, 45);
-            this.BTextBox.Name = "BTextBox";
-            this.BTextBox.Size = new System.Drawing.Size(70, 20);
-            this.BTextBox.TabIndex = 2;
-            this.BTextBox.Text = "100";
-            this.BTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
+            this.CaseWidthTextBox.Location = new System.Drawing.Point(12, 45);
+            this.CaseWidthTextBox.Name = "CaseWidthTextBox";
+            this.CaseWidthTextBox.Size = new System.Drawing.Size(70, 20);
+            this.CaseWidthTextBox.TabIndex = 2;
+            this.CaseWidthTextBox.Text = "100";
+            this.CaseWidthTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
-            // HTextBox
+            // CaseHeightTextBox
             // 
-            this.HTextBox.Location = new System.Drawing.Point(12, 71);
-            this.HTextBox.Name = "HTextBox";
-            this.HTextBox.Size = new System.Drawing.Size(70, 20);
-            this.HTextBox.TabIndex = 3;
-            this.HTextBox.Text = "15";
-            this.HTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
+            this.CaseHeightTextBox.Location = new System.Drawing.Point(12, 71);
+            this.CaseHeightTextBox.Name = "CaseHeightTextBox";
+            this.CaseHeightTextBox.Size = new System.Drawing.Size(70, 20);
+            this.CaseHeightTextBox.TabIndex = 3;
+            this.CaseHeightTextBox.Text = "15";
+            this.CaseHeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
-            // A1TextBox
+            // CameraHoleWidthTextBox
             // 
-            this.A1TextBox.Location = new System.Drawing.Point(12, 97);
-            this.A1TextBox.Name = "A1TextBox";
-            this.A1TextBox.Size = new System.Drawing.Size(70, 20);
-            this.A1TextBox.TabIndex = 4;
-            this.A1TextBox.Text = "20";
-            this.A1TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
+            this.CameraHoleWidthTextBox.Location = new System.Drawing.Point(12, 97);
+            this.CameraHoleWidthTextBox.Name = "CameraHoleWidthTextBox";
+            this.CameraHoleWidthTextBox.Size = new System.Drawing.Size(70, 20);
+            this.CameraHoleWidthTextBox.TabIndex = 4;
+            this.CameraHoleWidthTextBox.Text = "20";
+            this.CameraHoleWidthTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
-            // B1TextBox
+            // CameraHoleLengthTextBox
             // 
-            this.B1TextBox.Location = new System.Drawing.Point(12, 123);
-            this.B1TextBox.Name = "B1TextBox";
-            this.B1TextBox.Size = new System.Drawing.Size(70, 20);
-            this.B1TextBox.TabIndex = 5;
-            this.B1TextBox.Text = "30";
-            this.B1TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
+            this.CameraHoleLengthTextBox.Location = new System.Drawing.Point(12, 123);
+            this.CameraHoleLengthTextBox.Name = "CameraHoleLengthTextBox";
+            this.CameraHoleLengthTextBox.Size = new System.Drawing.Size(70, 20);
+            this.CameraHoleLengthTextBox.TabIndex = 5;
+            this.CameraHoleLengthTextBox.Text = "30";
+            this.CameraHoleLengthTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
-            // S0TextBox
+            // CameraRightGapTextBox
             // 
-            this.S0TextBox.Location = new System.Drawing.Point(12, 149);
-            this.S0TextBox.Name = "S0TextBox";
-            this.S0TextBox.Size = new System.Drawing.Size(70, 20);
-            this.S0TextBox.TabIndex = 6;
-            this.S0TextBox.Text = "20";
-            this.S0TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
+            this.CameraRightGapTextBox.Location = new System.Drawing.Point(12, 149);
+            this.CameraRightGapTextBox.Name = "CameraRightGapTextBox";
+            this.CameraRightGapTextBox.Size = new System.Drawing.Size(70, 20);
+            this.CameraRightGapTextBox.TabIndex = 6;
+            this.CameraRightGapTextBox.Text = "20";
+            this.CameraRightGapTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
-            // S1TextBox
+            // CameraTopGapTextBox
             // 
-            this.S1TextBox.Location = new System.Drawing.Point(12, 179);
-            this.S1TextBox.Name = "S1TextBox";
-            this.S1TextBox.Size = new System.Drawing.Size(70, 20);
-            this.S1TextBox.TabIndex = 7;
-            this.S1TextBox.Text = "20";
-            this.S1TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
+            this.CameraTopGapTextBox.Location = new System.Drawing.Point(12, 179);
+            this.CameraTopGapTextBox.Name = "CameraTopGapTextBox";
+            this.CameraTopGapTextBox.Size = new System.Drawing.Size(70, 20);
+            this.CameraTopGapTextBox.TabIndex = 7;
+            this.CameraTopGapTextBox.Text = "20";
+            this.CameraTopGapTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
-            // A2TextBox
+            // ChargerHoleWidthTextBox
             // 
-            this.A2TextBox.Location = new System.Drawing.Point(298, 19);
-            this.A2TextBox.Name = "A2TextBox";
-            this.A2TextBox.Size = new System.Drawing.Size(70, 20);
-            this.A2TextBox.TabIndex = 8;
-            this.A2TextBox.Text = "15";
-            this.A2TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
+            this.ChargerHoleWidthTextBox.Location = new System.Drawing.Point(298, 19);
+            this.ChargerHoleWidthTextBox.Name = "ChargerHoleWidthTextBox";
+            this.ChargerHoleWidthTextBox.Size = new System.Drawing.Size(70, 20);
+            this.ChargerHoleWidthTextBox.TabIndex = 8;
+            this.ChargerHoleWidthTextBox.Text = "15";
+            this.ChargerHoleWidthTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
-            // B2TextBox
+            // ChargerHoleHeightTextBox
             // 
-            this.B2TextBox.Location = new System.Drawing.Point(298, 45);
-            this.B2TextBox.Name = "B2TextBox";
-            this.B2TextBox.Size = new System.Drawing.Size(70, 20);
-            this.B2TextBox.TabIndex = 9;
-            this.B2TextBox.Text = "5";
-            this.B2TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
+            this.ChargerHoleHeightTextBox.Location = new System.Drawing.Point(298, 45);
+            this.ChargerHoleHeightTextBox.Name = "ChargerHoleHeightTextBox";
+            this.ChargerHoleHeightTextBox.Size = new System.Drawing.Size(70, 20);
+            this.ChargerHoleHeightTextBox.TabIndex = 9;
+            this.ChargerHoleHeightTextBox.Text = "5";
+            this.ChargerHoleHeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
-            // DTextBox
+            // MiniJackDiameterTextBox
             // 
-            this.DTextBox.Location = new System.Drawing.Point(298, 153);
-            this.DTextBox.Name = "DTextBox";
-            this.DTextBox.Size = new System.Drawing.Size(70, 20);
-            this.DTextBox.TabIndex = 13;
-            this.DTextBox.Text = "4";
-            this.DTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
+            this.MiniJackDiameterTextBox.Location = new System.Drawing.Point(298, 153);
+            this.MiniJackDiameterTextBox.Name = "MiniJackDiameterTextBox";
+            this.MiniJackDiameterTextBox.Size = new System.Drawing.Size(70, 20);
+            this.MiniJackDiameterTextBox.TabIndex = 13;
+            this.MiniJackDiameterTextBox.Text = "3,5";
+            this.MiniJackDiameterTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
-            // S2TextBox
+            // MiniJackGapTextBox
             // 
-            this.S2TextBox.Location = new System.Drawing.Point(298, 179);
-            this.S2TextBox.Name = "S2TextBox";
-            this.S2TextBox.Size = new System.Drawing.Size(70, 20);
-            this.S2TextBox.TabIndex = 14;
-            this.S2TextBox.Text = "5";
-            this.S2TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
+            this.MiniJackGapTextBox.Location = new System.Drawing.Point(298, 179);
+            this.MiniJackGapTextBox.Name = "MiniJackGapTextBox";
+            this.MiniJackGapTextBox.Size = new System.Drawing.Size(70, 20);
+            this.MiniJackGapTextBox.TabIndex = 14;
+            this.MiniJackGapTextBox.Text = "20";
+            this.MiniJackGapTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
-            // A3TextBox
+            // SideButtonsHoleHeightTextBox
             // 
-            this.A3TextBox.Location = new System.Drawing.Point(298, 71);
-            this.A3TextBox.Name = "A3TextBox";
-            this.A3TextBox.Size = new System.Drawing.Size(70, 20);
-            this.A3TextBox.TabIndex = 10;
-            this.A3TextBox.Text = "4";
-            this.A3TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
+            this.SideButtonsHoleHeightTextBox.Location = new System.Drawing.Point(298, 71);
+            this.SideButtonsHoleHeightTextBox.Name = "SideButtonsHoleHeightTextBox";
+            this.SideButtonsHoleHeightTextBox.Size = new System.Drawing.Size(70, 20);
+            this.SideButtonsHoleHeightTextBox.TabIndex = 10;
+            this.SideButtonsHoleHeightTextBox.Text = "4";
+            this.SideButtonsHoleHeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
-            // B3TextBox
+            // SideButtonsHoleWidthTextBox
             // 
-            this.B3TextBox.Location = new System.Drawing.Point(298, 97);
-            this.B3TextBox.Name = "B3TextBox";
-            this.B3TextBox.Size = new System.Drawing.Size(70, 20);
-            this.B3TextBox.TabIndex = 11;
-            this.B3TextBox.Text = "20";
-            this.B3TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
+            this.SideButtonsHoleWidthTextBox.Location = new System.Drawing.Point(298, 97);
+            this.SideButtonsHoleWidthTextBox.Name = "SideButtonsHoleWidthTextBox";
+            this.SideButtonsHoleWidthTextBox.Size = new System.Drawing.Size(70, 20);
+            this.SideButtonsHoleWidthTextBox.TabIndex = 11;
+            this.SideButtonsHoleWidthTextBox.Text = "30";
+            this.SideButtonsHoleWidthTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
-            // S3TextBox
+            // SideButtonsGapTextBox
             // 
-            this.S3TextBox.Location = new System.Drawing.Point(298, 123);
-            this.S3TextBox.Name = "S3TextBox";
-            this.S3TextBox.Size = new System.Drawing.Size(70, 20);
-            this.S3TextBox.TabIndex = 12;
-            this.S3TextBox.Text = "20";
-            this.S3TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
+            this.SideButtonsGapTextBox.Location = new System.Drawing.Point(298, 123);
+            this.SideButtonsGapTextBox.Name = "SideButtonsGapTextBox";
+            this.SideButtonsGapTextBox.Size = new System.Drawing.Size(70, 20);
+            this.SideButtonsGapTextBox.TabIndex = 12;
+            this.SideButtonsGapTextBox.Text = "20";
+            this.SideButtonsGapTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 263);
-            this.Controls.Add(this.S3TextBox);
-            this.Controls.Add(this.B3TextBox);
-            this.Controls.Add(this.A3TextBox);
-            this.Controls.Add(this.S2TextBox);
-            this.Controls.Add(this.DTextBox);
-            this.Controls.Add(this.B2TextBox);
-            this.Controls.Add(this.A2TextBox);
-            this.Controls.Add(this.S1TextBox);
-            this.Controls.Add(this.S0TextBox);
-            this.Controls.Add(this.B1TextBox);
-            this.Controls.Add(this.A1TextBox);
-            this.Controls.Add(this.HTextBox);
-            this.Controls.Add(this.BTextBox);
-            this.Controls.Add(this.ATextBox);
+            this.Controls.Add(this.SideButtonsGapTextBox);
+            this.Controls.Add(this.SideButtonsHoleWidthTextBox);
+            this.Controls.Add(this.SideButtonsHoleHeightTextBox);
+            this.Controls.Add(this.MiniJackGapTextBox);
+            this.Controls.Add(this.MiniJackDiameterTextBox);
+            this.Controls.Add(this.ChargerHoleHeightTextBox);
+            this.Controls.Add(this.ChargerHoleWidthTextBox);
+            this.Controls.Add(this.CameraTopGapTextBox);
+            this.Controls.Add(this.CameraRightGapTextBox);
+            this.Controls.Add(this.CameraHoleLengthTextBox);
+            this.Controls.Add(this.CameraHoleWidthTextBox);
+            this.Controls.Add(this.CaseHeightTextBox);
+            this.Controls.Add(this.CaseWidthTextBox);
+            this.Controls.Add(this.CaseLengthTextBox);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -387,20 +387,20 @@ namespace CADPhoneCaseUI
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox ATextBox;
-        private System.Windows.Forms.TextBox BTextBox;
-        private System.Windows.Forms.TextBox HTextBox;
-        private System.Windows.Forms.TextBox A1TextBox;
-        private System.Windows.Forms.TextBox B1TextBox;
-        private System.Windows.Forms.TextBox S0TextBox;
-        private System.Windows.Forms.TextBox S1TextBox;
-        private System.Windows.Forms.TextBox A2TextBox;
-        private System.Windows.Forms.TextBox B2TextBox;
-        private System.Windows.Forms.TextBox DTextBox;
-        private System.Windows.Forms.TextBox S2TextBox;
-        private System.Windows.Forms.TextBox A3TextBox;
-        private System.Windows.Forms.TextBox B3TextBox;
-        private System.Windows.Forms.TextBox S3TextBox;
+        private System.Windows.Forms.TextBox CaseLengthTextBox;
+        private System.Windows.Forms.TextBox CaseWidthTextBox;
+        private System.Windows.Forms.TextBox CaseHeightTextBox;
+        private System.Windows.Forms.TextBox CameraHoleWidthTextBox;
+        private System.Windows.Forms.TextBox CameraHoleLengthTextBox;
+        private System.Windows.Forms.TextBox CameraRightGapTextBox;
+        private System.Windows.Forms.TextBox CameraTopGapTextBox;
+        private System.Windows.Forms.TextBox ChargerHoleWidthTextBox;
+        private System.Windows.Forms.TextBox ChargerHoleHeightTextBox;
+        private System.Windows.Forms.TextBox MiniJackDiameterTextBox;
+        private System.Windows.Forms.TextBox MiniJackGapTextBox;
+        private System.Windows.Forms.TextBox SideButtonsHoleHeightTextBox;
+        private System.Windows.Forms.TextBox SideButtonsHoleWidthTextBox;
+        private System.Windows.Forms.TextBox SideButtonsGapTextBox;
     }
 }
 

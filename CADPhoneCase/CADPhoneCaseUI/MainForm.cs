@@ -17,22 +17,30 @@ namespace CADPhoneCaseUI
 
         private void CreateModelButton_Click(object sender, EventArgs e)
         {
+            CreatePhoneCase();
+        }
+
+        /// <summary>
+        /// Создание модели чехла.
+        /// </summary>
+        public void CreatePhoneCase()
+        {
             try
             {
-                var parameters = new PhoneCaseParameters(double.Parse(ATextBox.Text),
-                    double.Parse(BTextBox.Text),
-                    double.Parse(HTextBox.Text),
-                    double.Parse(A1TextBox.Text),
-                    double.Parse(B1TextBox.Text),
-                    double.Parse(S0TextBox.Text),
-                    double.Parse(S1TextBox.Text),
-                    double.Parse(A2TextBox.Text),
-                    double.Parse(B2TextBox.Text),
-                    double.Parse(DTextBox.Text),
-                    double.Parse(S2TextBox.Text),
-                    double.Parse(A3TextBox.Text),
-                    double.Parse(B3TextBox.Text),
-                    double.Parse(S3TextBox.Text)
+                var parameters = new PhoneCaseParameters(double.Parse(CaseLengthTextBox.Text),
+                    double.Parse(CaseWidthTextBox.Text),
+                    double.Parse(CaseHeightTextBox.Text),
+                    double.Parse(CameraHoleWidthTextBox.Text),
+                    double.Parse(CameraHoleLengthTextBox.Text),
+                    double.Parse(CameraRightGapTextBox.Text),
+                    double.Parse(CameraTopGapTextBox.Text),
+                    double.Parse(ChargerHoleWidthTextBox.Text),
+                    double.Parse(ChargerHoleHeightTextBox.Text),
+                    double.Parse(MiniJackDiameterTextBox.Text),
+                    double.Parse(MiniJackGapTextBox.Text),
+                    double.Parse(SideButtonsHoleHeightTextBox.Text),
+                    double.Parse(SideButtonsHoleWidthTextBox.Text),
+                    double.Parse(SideButtonsGapTextBox.Text)
                 );
                 _kompas.OpenKompas();
                 var model = new PhoneCaseModeling(_kompas.Kompas);
@@ -40,12 +48,13 @@ namespace CADPhoneCaseUI
             }
             catch (FormatException)
             {
-                MessageBox.Show("Данные введены некоректно \nВозможно есть пустые поля или лишние запятые",
-                    "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(@"Данные введены некоректно 
+Возможно есть пустые поля или лишние запятые",
+                    @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (ArgumentException ex)
             {
-                MessageBox.Show(ex.Message, "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

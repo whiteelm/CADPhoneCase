@@ -11,107 +11,107 @@ namespace CADPhoneCase
         /// <summary>
         /// Длина чехла.
         /// </summary>
-        public double A { get; set; }
+        public double CaseLength { get; set; }
 
         /// <summary>
         /// Ширина чехла.
         /// </summary>
-        public double B { get; set; }
+        public double CaseWidth { get; set; }
 
         /// <summary>
         /// Высота чехла.
         /// </summary>
-        public double H { get; set; }
+        public double CaseHeight { get; set; }
 
         /// <summary>
         /// Ширина отверстия для камеры.
         /// </summary>
-        public double A1 { get; set; }
+        public double CameraHoleWidth { get; set; }
 
         /// <summary>
         /// Длина отверстия для камеры.
         /// </summary>
-        public double B1 { get; set; }
+        public double CameraHoleLength { get; set; }
 
         /// <summary>
         /// Зазор между отверстием для камеры и правой стенкой чехла.
         /// </summary>
-        public double S0 { get; set; }
+        public double CameraRightGap { get; set; }
 
         /// <summary>
         /// Зазор между отверстием для камеры и верхней стенкой чехла.
         /// </summary>
-        public double S1 { get; set; }
+        public double CameraTopGap { get; set; }
 
         /// <summary>
         /// Ширина отверстия для зарядки.
         /// </summary>
-        public double A2 { get; set; }
+        public double ChargerHoleWidth { get; set; }
 
         /// <summary>
         /// Высота отверстия для зарядки.
         /// </summary>
-        public double B2 { get; set; }
+        public double ChargerHoleHeight { get; set; }
 
         /// <summary>
         /// Диаметр отверстия для наушников.
         /// </summary>
-        public double D { get; set; }
+        public double MiniJackDiameter { get; set; }
 
         /// <summary>
         /// Зазор между отверстием для наушников и левой стенкой чехла.
         /// </summary>
-        public double S2 { get; set; }
+        public double MiniJackGap { get; set; }
 
         /// <summary>
         /// Высота отверстия для боковых кнопок.
         /// </summary>
-        public double A3 { get; set; }
+        public double SideButtonsHoleHeight { get; set; }
 
         /// <summary>
         /// Ширина отверстия для боковых кнопок.
         /// </summary>
-        public double B3 { get; set; }
+        public double SideButtonsHoleWidth { get; set; }
 
         /// <summary>
         /// Зазор между отверстием для боковых кнопок и верхним правым углом.
         /// </summary>
-        public double S3 { get; set; }
+        public double SideButtonsGap { get; set; }
 
         /// <summary>
         /// Установка параметров.
         /// </summary>
-        /// <param name="a">Длина чехла.</param>
-        /// <param name="b">Ширина чехла.</param>
-        /// <param name="h">Высота чехла.</param>
-        /// <param name="a1">Ширина отверстия для камеры.</param>
-        /// <param name="b1">Длина отверстия для камеры.</param>
-        /// <param name="s0">Зазор между отверстием для камеры и правой стенкой чехла.</param>
-        /// <param name="s1">Зазор между отверстием для камеры и верхней стенкой чехла.</param>
-        /// <param name="a2">Ширина отверстия для зарядки.</param>
-        /// <param name="b2">Высота отверстия для зарядки.</param>
-        /// <param name="d">Диаметр отверстия для наушников.</param>
-        /// <param name="s2">Зазор между отверстием для наушников и левой стенкой чехла.</param>
-        /// <param name="a3">Высота отверстия для боковых кнопок.</param>
-        /// <param name="b3">Ширина отверстия для боковых кнопок.</param>
-        /// <param name="s3">Зазор между отверстием для боковых кнопок и верхним правым углом.</param>
-        public PhoneCaseParameters(double a, double b, double h, double a1, double b1, double s0, double s1, 
-            double a2, double b2, double d, double s2, double a3, double b3, double s3)
+        /// <param name="caseLength">Длина чехла.</param>
+        /// <param name="caseWidth">Ширина чехла.</param>
+        /// <param name="caseHeight">Высота чехла.</param>
+        /// <param name="cameraHoleWidth">Ширина отверстия для камеры.</param>
+        /// <param name="cameraHoleLength">Длина отверстия для камеры.</param>
+        /// <param name="cameraRightGap">Зазор между отверстием для камеры и правой стенкой чехла.</param>
+        /// <param name="cameraTopGap">Зазор между отверстием для камеры и верхней стенкой чехла.</param>
+        /// <param name="chargerHoleWidth">Ширина отверстия для зарядки.</param>
+        /// <param name="chargerHoleHeight">Высота отверстия для зарядки.</param>
+        /// <param name="miniJackDiameter">Диаметр отверстия для наушников.</param>
+        /// <param name="miniJackGap">Зазор между отверстием для наушников и левой стенкой чехла.</param>
+        /// <param name="sideButtonsHoleHeight">Высота отверстия для боковых кнопок.</param>
+        /// <param name="sideButtonsHoleWidth">Ширина отверстия для боковых кнопок.</param>
+        /// <param name="sideButtonsGap">Зазор между отверстием для боковых кнопок и верхним правым углом.</param>
+        public PhoneCaseParameters(double caseLength, double caseWidth, double caseHeight, double cameraHoleWidth, double cameraHoleLength, double cameraRightGap, double cameraTopGap, 
+            double chargerHoleWidth, double chargerHoleHeight, double miniJackDiameter, double miniJackGap, double sideButtonsHoleHeight, double sideButtonsHoleWidth, double sideButtonsGap)
         {
-            A = a;
-            B = b;
-            H = h;
-            A1 = a1;
-            B1 = b1;
-            S0 = s0;
-            S1 = s1;
-            A2 = a2;
-            B2 = b2;
-            D = d;
-            S2 = s2;
-            A3 = a3;
-            B3 = b3;
-            S3 = s3;
+            CaseLength = caseLength;
+            CaseWidth = caseWidth;
+            CaseHeight = caseHeight;
+            CameraHoleWidth = cameraHoleWidth;
+            CameraHoleLength = cameraHoleLength;
+            CameraRightGap = cameraRightGap;
+            CameraTopGap = cameraTopGap;
+            ChargerHoleWidth = chargerHoleWidth;
+            ChargerHoleHeight = chargerHoleHeight;
+            MiniJackDiameter = miniJackDiameter;
+            MiniJackGap = miniJackGap;
+            SideButtonsHoleHeight = sideButtonsHoleHeight;
+            SideButtonsHoleWidth = sideButtonsHoleWidth;
+            SideButtonsGap = sideButtonsGap;
             TypeValidation();
             ValueValidation();
         }
@@ -123,20 +123,20 @@ namespace CADPhoneCase
         {
             var errorMessage = new List<string>();
 
-            CheckValue(errorMessage, A, "Длина чехла");
-            CheckValue(errorMessage, B, "Ширина чехла");
-            CheckValue(errorMessage, H, "Высота чехла");
-            CheckValue(errorMessage, A1, "Ширина отверстия для камеры");
-            CheckValue(errorMessage, B1, "Длина отверстия для камеры");
-            CheckValue(errorMessage, S0, "Зазор между отверстием для камеры и правой стенкой чехла");
-            CheckValue(errorMessage, S1, "Зазор между отверстием для камеры и верхней стенкой чехла");
-            CheckValue(errorMessage, A2, "Ширина отверстия для зарядки");
-            CheckValue(errorMessage, B2, "Высота отверстия для зарядки");
-            CheckValue(errorMessage, S2, "Зазор между отверстием для наушников и левой стенкой чехла");
-            CheckValue(errorMessage, D, "Диаметр отверстия для наушников");
-            CheckValue(errorMessage, A3, "Высота отверстия для боковых кнопок");
-            CheckValue(errorMessage, B3, "Ширина отверстия для боковых кнопок");
-            CheckValue(errorMessage, S3, "Зазор между отверстием для боковых кнопок и верхним правым углом");
+            CheckValue(errorMessage, CaseLength, "Длина чехла");
+            CheckValue(errorMessage, CaseWidth, "Ширина чехла");
+            CheckValue(errorMessage, CaseHeight, "Высота чехла");
+            CheckValue(errorMessage, CameraHoleWidth, "Ширина отверстия для камеры");
+            CheckValue(errorMessage, CameraHoleLength, "Длина отверстия для камеры");
+            CheckValue(errorMessage, CameraRightGap, "Зазор между отверстием для камеры и правой стенкой чехла");
+            CheckValue(errorMessage, CameraTopGap, "Зазор между отверстием для камеры и верхней стенкой чехла");
+            CheckValue(errorMessage, ChargerHoleWidth, "Ширина отверстия для зарядки");
+            CheckValue(errorMessage, ChargerHoleHeight, "Высота отверстия для зарядки");
+            CheckValue(errorMessage, MiniJackGap, "Зазор между отверстием для наушников и левой стенкой чехла");
+            CheckValue(errorMessage, MiniJackDiameter, "Диаметр отверстия для наушников");
+            CheckValue(errorMessage, SideButtonsHoleHeight, "Высота отверстия для боковых кнопок");
+            CheckValue(errorMessage, SideButtonsHoleWidth, "Ширина отверстия для боковых кнопок");
+            CheckValue(errorMessage, SideButtonsGap, "Зазор между отверстием для боковых кнопок и верхним правым углом");
             if (errorMessage.Count > 0)
             {
                 throw new ArgumentException(string.Join("\n", errorMessage));
@@ -164,76 +164,88 @@ namespace CADPhoneCase
         {
             var errorMessage = new List<string>();
 
-            if (A < 100 || A > 500)
+            if (CaseLength < 100 || CaseLength > 500)
             {
                 errorMessage.Add("Длина чехла должна быть не меньше 100 мм " +
                                  "и не больше 500 мм");
             }
-            if (B < 100 || B > 400)
+
+            if (CaseWidth < 100 || CaseWidth > 400)
             {
                 errorMessage.Add("Ширина чехла должна быть не меньше 100 мм " +
                                  "и не больше 400 мм");
             }
-            if (H < 10 || H > 20)
+
+            if (CaseHeight < 10 || CaseHeight > 20)
             {
                 errorMessage.Add("Высота чехла должна быть не меньше 10 мм " +
                                  "и не больше 20 мм");
             }
-            if (A1 < 10 || A1 > 50)
+
+            if (CameraHoleWidth < 10 || CameraHoleWidth > 50)
             {
                 errorMessage.Add("Ширина отверстия для камеры должна быть " +
                                  "не меньше 10 мм и не больше 50 мм");
             }
-            if (B1 < 10 || B1 > 50)
+
+            if (CameraHoleLength < 10 || CameraHoleLength > 50)
             {
                 errorMessage.Add("Длина отверстия для камеры должна быть " +
                                  "не меньше 10 мм и не больше 50 мм");
             }
-            if (S0 < 5 || S0 > 20)
+
+            if (CameraRightGap < 5 || CameraRightGap > 20)
             {
                 errorMessage.Add("Зазор между отверстием для камеры и " +
                                  "правой стенкой чехла должна быть " + 
                                  " не меньше 5 мм и не больше 20 мм");
             }
-            if (S1 < 5 || S1 > 20)
+
+            if (CameraTopGap < 5 || CameraTopGap > 20)
             {
                 errorMessage.Add("Зазор между отверстием для камеры и " +
                                  "верхней стенкой чехла должна быть " +
                                  " не меньше 5 мм и не больше 20 мм");
             }
-            if (A2 < 10 || A2 > 20)
+
+            if (ChargerHoleWidth < 10 || ChargerHoleWidth > 20)
             {
                 errorMessage.Add("Ширина отверстия для зарядки должна быть " +
                                  "не меньше 10 мм и не больше 20 мм");
             }
-            if (B2 < 3 || B2 > 6)
+
+            if (ChargerHoleHeight < 3 || ChargerHoleHeight > 6)
             {
                 errorMessage.Add("Высота отверстия для зарядки должна быть " +
                                  "не меньше 3 мм и не больше 6 мм");
             }
-            if (A3 < 2 || A3 > H - 2)
+
+            if (SideButtonsHoleHeight < 2 || SideButtonsHoleHeight > CaseHeight - 2)
             {
-                errorMessage.Add("Высота отверстия для боковых кнопок зарядки " +
-                                 "должна быть не меньше 2 мм и не больше высоты чехла минус 2 мм");
+                errorMessage.Add("Высота отверстия для боковых кнопок " +
+                                 $"зарядки должна быть не меньше {CaseHeight - 2} мм");
             }
-            if (B3 < 5 || B3 > A - S3 - 20)
+
+            if (SideButtonsHoleWidth < 5 || SideButtonsHoleWidth > CaseLength - SideButtonsGap - 20)
             {
                 errorMessage.Add("Ширина отверстия для боковых кнопок " +
                                  "должна быть не меньше 5 мм и не больше " +
-                                 " ширины чехла-зазор для отверстия минус 20  мм");
+                                 $" {CaseLength - SideButtonsGap - 20} мм");
             }
-            if (D < 3.5 || D > 6)
+
+            if (MiniJackDiameter < 3.5 || MiniJackDiameter > 6)
             {
                 errorMessage.Add("Диаметр отверстия для наушников " +
                                  "должна быть не меньше 3.5 мм и не больше 6 мм");
             }
-            if (S2 < 3.5 || S2 > 6)
+
+            var s = CaseWidth / 2 - MiniJackDiameter / 2 - ChargerHoleWidth / 2 - 5;
+            if (MiniJackGap < 2 || MiniJackGap > s)
             {
                 errorMessage.Add("Зазор между отверстием для наушников и левой стенкой чехла " +
-                                 "должна быть не меньше половины диаметра + 2 мм и не больше " +
-                                 "половины ширины чехла минус радиус отверстия для наушников - " +
-                                 "пол ширины отверстия для зарядки минус 5 мм");
+                                 $"должна быть не меньше половины диаметра + 2 мм и не больше {s} мм");
             }
+
             if (errorMessage.Count > 0)
             {
                 throw new ArgumentException(string.Join("\n", errorMessage));
