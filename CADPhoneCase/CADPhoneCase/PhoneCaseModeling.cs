@@ -193,6 +193,7 @@ namespace CADPhoneCase
             _sketchEdit.ksRectangle(param);
             _sketchDefinition.EndEdit();
         }
+
         /// <summary>
         /// Нарисовать окружность.
         /// </summary>
