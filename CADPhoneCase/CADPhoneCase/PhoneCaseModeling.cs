@@ -118,7 +118,7 @@ namespace CADPhoneCase
         {
             var entityExtrude = (ksEntity)_part.NewEntity((short)Obj3dType.o3d_baseExtrusion);
             var entityExtrudeDefinition = (ksBaseExtrusionDefinition)entityExtrude.GetDefinition();
-            entityExtrudeDefinition.SetSideParam(true, 0, depth, 0, false);
+            entityExtrudeDefinition.SetSideParam(true, 0, depth);
             entityExtrudeDefinition.SetSketch(entitySketch);
             entityExtrude.Create();
         }
@@ -133,7 +133,7 @@ namespace CADPhoneCase
             var entityCutExtrusion = (ksEntity)_part.NewEntity((short)Obj3dType.o3d_cutExtrusion);
             var cutExtrusionDefinition = (ksCutExtrusionDefinition)entityCutExtrusion.GetDefinition();
             cutExtrusionDefinition.directionType = direction;
-            cutExtrusionDefinition.SetSideParam(true, 0, 1, 0, false);
+            cutExtrusionDefinition.SetSideParam(true);
             cutExtrusionDefinition.SetSketch(entitySketch);
             entityCutExtrusion.Create();
         }
@@ -190,7 +190,7 @@ namespace CADPhoneCase
             param.style = 1;
             param.x = x;
             param.y = y;
-            _sketchEdit.ksRectangle(param, 0);
+            _sketchEdit.ksRectangle(param);
             _sketchDefinition.EndEdit();
         }
         /// <summary>
