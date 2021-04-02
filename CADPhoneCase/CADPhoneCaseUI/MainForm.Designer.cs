@@ -62,7 +62,7 @@ namespace CADPhoneCaseUI
             // 
             // CreateBodelButton
             // 
-            this.CreateBodelButton.Location = new System.Drawing.Point(252, 212);
+            this.CreateBodelButton.Location = new System.Drawing.Point(244, 208);
             this.CreateBodelButton.Name = "CreateBodelButton";
             this.CreateBodelButton.Size = new System.Drawing.Size(100, 23);
             this.CreateBodelButton.TabIndex = 15;
@@ -73,7 +73,7 @@ namespace CADPhoneCaseUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(111, 15);
+            this.label1.Location = new System.Drawing.Point(7, 15);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 13);
@@ -83,7 +83,7 @@ namespace CADPhoneCaseUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(105, 41);
+            this.label2.Location = new System.Drawing.Point(7, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 13);
             this.label2.TabIndex = 2;
@@ -92,7 +92,7 @@ namespace CADPhoneCaseUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(106, 67);
+            this.label3.Location = new System.Drawing.Point(7, 67);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 13);
             this.label3.TabIndex = 3;
@@ -101,7 +101,7 @@ namespace CADPhoneCaseUI
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 93);
+            this.label4.Location = new System.Drawing.Point(7, 93);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(165, 13);
             this.label4.TabIndex = 4;
@@ -110,7 +110,7 @@ namespace CADPhoneCaseUI
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 119);
+            this.label5.Location = new System.Drawing.Point(7, 119);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(159, 13);
             this.label5.TabIndex = 5;
@@ -119,7 +119,7 @@ namespace CADPhoneCaseUI
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 142);
+            this.label6.Location = new System.Drawing.Point(7, 142);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(170, 26);
             this.label6.TabIndex = 6;
@@ -137,7 +137,7 @@ namespace CADPhoneCaseUI
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(339, 15);
+            this.label8.Location = new System.Drawing.Point(286, 15);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(167, 13);
             this.label8.TabIndex = 8;
@@ -146,7 +146,7 @@ namespace CADPhoneCaseUI
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(340, 41);
+            this.label9.Location = new System.Drawing.Point(286, 41);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(166, 13);
             this.label9.TabIndex = 9;
@@ -155,7 +155,7 @@ namespace CADPhoneCaseUI
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(319, 149);
+            this.label10.Location = new System.Drawing.Point(286, 149);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(187, 13);
             this.label10.TabIndex = 10;
@@ -164,7 +164,7 @@ namespace CADPhoneCaseUI
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(306, 172);
+            this.label11.Location = new System.Drawing.Point(286, 172);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(200, 26);
             this.label11.TabIndex = 11;
@@ -173,7 +173,7 @@ namespace CADPhoneCaseUI
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(300, 67);
+            this.label12.Location = new System.Drawing.Point(286, 67);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(206, 13);
             this.label12.TabIndex = 12;
@@ -182,7 +182,7 @@ namespace CADPhoneCaseUI
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(299, 93);
+            this.label13.Location = new System.Drawing.Point(286, 93);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(207, 13);
             this.label13.TabIndex = 13;
@@ -327,7 +327,7 @@ namespace CADPhoneCaseUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 263);
+            this.ClientSize = new System.Drawing.Size(594, 243);
             this.Controls.Add(this.SideButtonsGapTextBox);
             this.Controls.Add(this.SideButtonsHoleWidthTextBox);
             this.Controls.Add(this.SideButtonsHoleHeightTextBox);
@@ -359,8 +359,8 @@ namespace CADPhoneCaseUI
             this.Controls.Add(this.CreateBodelButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(650, 298);
-            this.MinimumSize = new System.Drawing.Size(650, 298);
+            this.MaximumSize = new System.Drawing.Size(610, 278);
+            this.MinimumSize = new System.Drawing.Size(610, 278);
             this.Name = "MainForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

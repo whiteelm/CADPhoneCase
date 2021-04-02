@@ -23,7 +23,7 @@ namespace CADPhoneCaseUI
         /// <summary>
         /// Создание модели чехла.
         /// </summary>
-        public void CreatePhoneCase()
+        private void CreatePhoneCase()
         {
             try
             {

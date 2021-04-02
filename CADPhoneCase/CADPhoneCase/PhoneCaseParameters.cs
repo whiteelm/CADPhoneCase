@@ -115,13 +115,13 @@ namespace CADPhoneCase
             SideButtonsHoleHeight = sideButtonsHoleHeight;
             SideButtonsHoleWidth = sideButtonsHoleWidth;
             SideButtonsGap = sideButtonsGap;
-            TypeValidation();
+            ValueValidation();
         }
 
         /// <summary>
         /// Валидация параметров по диапазону значения.
         /// </summary>
-        private void TypeValidation()
+        private void ValueValidation()
         {
             var errorMessage = new List<string>();
 
