@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="KompasInteractor.cs" />
-    <Compile Include="PhoneCaseModeling.cs" />
+    <Compile Include="PhoneCaseModeler.cs" />
     <Compile Include="PhoneCaseParameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

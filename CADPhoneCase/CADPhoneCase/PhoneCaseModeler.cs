@@ -7,43 +7,13 @@ namespace CADPhoneCase
     /// <summary>
     /// Создание модели.
     /// </summary>
-    public class PhoneCaseModeling
+    public class PhoneCaseModeler
     {
-        /// <summary>
-        ///  Указатель на экземпляр компаса.
-        /// </summary>
-        private KompasObject _kompas;
-
-        /// <summary>
-        ///  Указатель на интерфейс документа.
-        /// </summary>
-        private ksDocument3D _doc3D;
-
-        /// <summary>
-        ///  Указатель на интерфейс компонента.
-        /// </summary>
-        private ksPart _part;
-        
-        /// <summary>
-        ///  Указатель на интерфейс сущности.
-        /// </summary>
-        private ksEntity _entitySketch;
-
-        /// <summary>
-        ///  Указатель на интерфейс параметров эскиза.
-        /// </summary>
-        private ksSketchDefinition _sketchDefinition;
-
-        /// <summary>
-        ///  Указатель на эскиз.
-        /// </summary>
-        private ksDocument2D _sketchEdit;
-
         /// <summary>
         /// Конструктор класса.
         /// </summary>
         /// <param name="kompas">Интерфейс API компаса.</param>
-        public PhoneCaseModeling(KompasObject kompas)
+        public PhoneCaseModeler(KompasObject kompas)
         {
             _kompas = kompas;
         }
@@ -54,46 +24,98 @@ namespace CADPhoneCase
         /// <param name="parameters">Размеры чехла.</param>
         public void CreateModel(PhoneCaseParameters parameters)
         {
-            var caseLength = parameters.CaseLength;
-            var caseWidth = parameters.CaseWidth;
-            var caseHeight = parameters.CaseHeight;
-            var cameraHoleWidth = parameters.CameraHoleWidth;
-            var cameraHoleLength = parameters.CameraHoleLength;
-            var cameraRightGap = parameters.CameraRightGap;
-            var cameraTopGap = parameters.CameraTopGap;
-            var chargerHoleWidth = parameters.ChargerHoleWidth;
-            var chargerHoleHeight = parameters.ChargerHoleHeight;
-            var jackDiameter = parameters.MiniJackDiameter;
-            var jackGap = parameters.MiniJackGap;
-            var sideButtonsHoleHeight = parameters.SideButtonsHoleHeight;
-            var sideButtonsHoleWidth = parameters.SideButtonsHoleWidth;
-            var sideButtonsGap = parameters.SideButtonsGap;
-            var centerHeight = -caseHeight / 2 - 0.5;
+            var centerHeight = -parameters.CaseHeight / 2 - 0.5;
             _doc3D = (ksDocument3D)_kompas.Document3D();
             _doc3D.Create();
             _doc3D = (ksDocument3D)_kompas.ActiveDocument3D();
             _part = (ksPart)_doc3D.GetPart((short)Part_Type.pTop_Part);
-            //Создание основы чехла
+            CreateCaseBase(parameters.CaseLength, parameters.CaseWidth, parameters.CaseHeight);
+            CreateCamHole(parameters.CameraHoleLength, parameters.CameraHoleWidth, 
+                parameters.CameraRightGap, parameters.CameraTopGap);
+            CreateSideButtonsHole(parameters.SideButtonsHoleWidth, parameters.SideButtonsHoleHeight, 
+                centerHeight, parameters.SideButtonsGap);
+            CreateMiniJackHole(parameters.MiniJackDiameter, parameters.MiniJackGap, parameters.CaseWidth,
+                parameters.CaseLength, centerHeight);
+            CreateChargerHole(parameters.ChargerHoleWidth, parameters.ChargerHoleHeight, parameters.CaseLength,
+                parameters.CaseWidth, centerHeight);
+        }
+        
+        /// <summary>
+        /// Создание основы чехла.
+        /// </summary>
+        /// <param name="caseLength">Длина чехла.</param>
+        /// <param name="caseWidth">Ширина чехла.</param>
+        /// <param name="caseHeight">Высота чехла.</param>
+        private void CreateCaseBase(double caseLength, double caseWidth, double caseHeight)
+        {
             var currentPlane = (ksEntity)_part.GetDefaultEntity((short)Obj3dType.o3d_planeXOY);
             DrawRectangle(caseLength, caseWidth, 0, 0, currentPlane);
             MakeExtrude(caseHeight, _entitySketch);
             MakeShell();
-            //Создание отверстия для камеры
-            currentPlane = (ksEntity)_part.GetDefaultEntity((short)Obj3dType.o3d_planeXOY);
-            DrawRectangle(cameraHoleLength, cameraHoleWidth, cameraRightGap, cameraTopGap, currentPlane);
+        }
+
+        /// <summary>
+        /// Создание отверстия для камеры.
+        /// </summary>
+        /// <param name="cameraHoleLength">Длина отверстия для камеры.</param>
+        /// <param name="cameraHoleWidth">Ширина отверстия для камеры.</param>
+        /// <param name="cameraRightGap">Зазор между отверстием для камеры и правой стенкой.</param>
+        /// <param name="cameraTopGap">Зазор между отверстием для камеры и верхней стенкой.</param>
+        private void CreateCamHole(double cameraHoleLength, double cameraHoleWidth, 
+            double cameraRightGap, double cameraTopGap)
+        {
+            var currentPlane = (ksEntity)_part.GetDefaultEntity((short)Obj3dType.o3d_planeXOY);
+            DrawRectangle(cameraHoleLength, cameraHoleWidth, cameraRightGap,
+                cameraTopGap, currentPlane);
             MakeCutExtrude(_entitySketch, (short)Direction_Type.dtReverse);
-            //Создание отверстия для боковых кнопок
-            currentPlane = (ksEntity)_part.GetDefaultEntity((short)Obj3dType.o3d_planeYOZ);
-            DrawRectangle(-sideButtonsHoleWidth, -sideButtonsHoleHeight, centerHeight + sideButtonsHoleHeight/2,
-                -sideButtonsGap, currentPlane);
+        }
+
+        /// <summary>
+        /// Создание отверстия для боковых кнопок.
+        /// </summary>
+        /// <param name="sideButtonsHoleWidth">Ширина отверстия боковых кнопок.</param>
+        /// <param name="sideButtonsHoleHeight">Высота отверстия боковых кнопок.</param>
+        /// <param name="centerHeight">Середина высоты чехла.</param>
+        /// <param name="sideButtonsGap">Зазор отверстия боковых кнопок.</param>
+        private void CreateSideButtonsHole(double sideButtonsHoleWidth, double sideButtonsHoleHeight, 
+            double centerHeight, double sideButtonsGap)
+        {
+            var currentPlane = (ksEntity)_part.GetDefaultEntity((short)Obj3dType.o3d_planeYOZ);
+            DrawRectangle(-sideButtonsHoleWidth, -sideButtonsHoleHeight,
+                centerHeight + sideButtonsHoleHeight / 2, -sideButtonsGap, currentPlane);
             MakeCutExtrude(_entitySketch, (short)Direction_Type.dtNormal);
-            //Создание отверстия для наушников
-            var offsetPlaneXOZ = CreateOffsetPlaneXOZ(caseLength);
-            DrawCircle(caseWidth- jackGap, centerHeight, jackDiameter, offsetPlaneXOZ);
+        }
+
+        /// <summary>
+        /// Создание отверстия для наушников.
+        /// </summary>
+        /// <param name="jackDiameter">Диаметр отверстия для наушников.</param>
+        /// <param name="jackGap">Зазор для отверстия для наушников.</param>
+        /// <param name="caseWidth">Ширина чехла.</param>
+        /// <param name="caseLength">Высота чехла.</param>
+        /// <param name="centerHeight">Середина высоты чехла.</param>
+        private void CreateMiniJackHole(double jackDiameter, double jackGap, double caseWidth,
+            double caseLength, double centerHeight)
+        {
+            var offsetPlaneXoz = CreateOffsetPlaneXoz(caseLength);
+            DrawCircle(caseWidth - jackGap, centerHeight, jackDiameter, offsetPlaneXoz);
             MakeCutExtrude(_entitySketch, (short)Direction_Type.dtNormal);
-            //Создание отверстия для зарядки
-            DrawRectangle(chargerHoleHeight, chargerHoleWidth, -chargerHoleWidth/2 + caseWidth / 2, 
-                centerHeight - chargerHoleHeight/2, offsetPlaneXOZ);
+        }
+
+        /// <summary>
+        /// Создание отверстия для зарядки.
+        /// </summary>
+        /// <param name="chargerHoleWidth">Ширина отверстия для зарядки.</param>
+        /// <param name="chargerHoleHeight">Высота отверстия для зарядки.</param>
+        /// <param name="caseLength">Длина чехла.</param>
+        /// <param name="caseWidth">Ширина чехла.</param>
+        /// <param name="centerHeight">Середина высоты чехла.</param>
+        private void CreateChargerHole(double chargerHoleWidth, double chargerHoleHeight, double caseLength,
+            double caseWidth, double centerHeight)
+        {
+            var offsetPlaneXoz = CreateOffsetPlaneXoz(caseLength);
+            DrawRectangle(chargerHoleHeight, chargerHoleWidth, -chargerHoleWidth / 2 + caseWidth / 2,
+                centerHeight - chargerHoleHeight / 2, offsetPlaneXoz);
             MakeCutExtrude(_entitySketch, (short)Direction_Type.dtNormal);
         }
 
@@ -159,7 +181,7 @@ namespace CADPhoneCase
         /// </summary>
         /// <param name="offset">Расстояние до плоскости.</param>
         /// <returns></returns>
-        private ksEntity CreateOffsetPlaneXOZ(double offset)
+        private ksEntity CreateOffsetPlaneXoz(double offset)
         {
             var newPlane = (ksEntity)_part.NewEntity((short)Obj3dType.o3d_planeOffset);
             var newPlaneDefinition = (ksPlaneOffsetDefinition)newPlane.GetDefinition();
@@ -208,5 +230,36 @@ namespace CADPhoneCase
             _sketchEdit.ksCircle(xc, yc, radius, 1);
             _sketchDefinition.EndEdit();
         }
+
+        /// <summary>
+        ///  Указатель на экземпляр компаса.
+        /// </summary>
+        private readonly KompasObject _kompas;
+
+        /// <summary>
+        ///  Указатель на интерфейс документа.
+        /// </summary>
+        private ksDocument3D _doc3D;
+
+        /// <summary>
+        ///  Указатель на интерфейс компонента.
+        /// </summary>
+        private ksPart _part;
+
+        /// <summary>
+        ///  Указатель на интерфейс сущности.
+        /// </summary>
+        private ksEntity _entitySketch;
+
+        /// <summary>
+        ///  Указатель на интерфейс параметров эскиза.
+        /// </summary>
+        private ksSketchDefinition _sketchDefinition;
+
+        /// <summary>
+        ///  Указатель на эскиз.
+        /// </summary>
+        private ksDocument2D _sketchEdit;
+
     }
 }

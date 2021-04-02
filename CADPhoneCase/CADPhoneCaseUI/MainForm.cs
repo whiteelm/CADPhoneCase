@@ -7,7 +7,7 @@ namespace CADPhoneCaseUI
 {
     public partial class MainForm : Form
     {
-        public KompasInteractor _kompas;
+        private readonly KompasInteractor _kompas;
 
         public MainForm()
         {
@@ -43,7 +43,7 @@ namespace CADPhoneCaseUI
                     double.Parse(SideButtonsGapTextBox.Text)
                 );
                 _kompas.OpenKompas();
-                var model = new PhoneCaseModeling(_kompas.Kompas);
+                var model = new PhoneCaseModeler(_kompas.Kompas);
                 model.CreateModel(parameters);
             }
             catch (FormatException)

@@ -62,7 +62,7 @@ namespace CADPhoneCaseUI
             // 
             // CreateBodelButton
             // 
-            this.CreateBodelButton.Location = new System.Drawing.Point(250, 228);
+            this.CreateBodelButton.Location = new System.Drawing.Point(252, 212);
             this.CreateBodelButton.Name = "CreateBodelButton";
             this.CreateBodelButton.Size = new System.Drawing.Size(100, 23);
             this.CreateBodelButton.TabIndex = 15;
@@ -73,7 +73,7 @@ namespace CADPhoneCaseUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(88, 22);
+            this.label1.Location = new System.Drawing.Point(111, 15);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 13);
@@ -83,7 +83,7 @@ namespace CADPhoneCaseUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(88, 48);
+            this.label2.Location = new System.Drawing.Point(105, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 13);
             this.label2.TabIndex = 2;
@@ -92,7 +92,7 @@ namespace CADPhoneCaseUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(88, 74);
+            this.label3.Location = new System.Drawing.Point(106, 67);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 13);
             this.label3.TabIndex = 3;
@@ -101,7 +101,7 @@ namespace CADPhoneCaseUI
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(88, 100);
+            this.label4.Location = new System.Drawing.Point(17, 93);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(165, 13);
             this.label4.TabIndex = 4;
@@ -110,7 +110,7 @@ namespace CADPhoneCaseUI
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(88, 126);
+            this.label5.Location = new System.Drawing.Point(23, 119);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(159, 13);
             this.label5.TabIndex = 5;
@@ -119,7 +119,7 @@ namespace CADPhoneCaseUI
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(88, 149);
+            this.label6.Location = new System.Drawing.Point(12, 142);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(170, 26);
             this.label6.TabIndex = 6;
@@ -128,7 +128,7 @@ namespace CADPhoneCaseUI
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(88, 179);
+            this.label7.Location = new System.Drawing.Point(7, 172);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(175, 26);
             this.label7.TabIndex = 7;
@@ -137,7 +137,7 @@ namespace CADPhoneCaseUI
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(374, 22);
+            this.label8.Location = new System.Drawing.Point(339, 15);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(167, 13);
             this.label8.TabIndex = 8;
@@ -146,7 +146,7 @@ namespace CADPhoneCaseUI
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(374, 48);
+            this.label9.Location = new System.Drawing.Point(340, 41);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(166, 13);
             this.label9.TabIndex = 9;
@@ -155,7 +155,7 @@ namespace CADPhoneCaseUI
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(374, 156);
+            this.label10.Location = new System.Drawing.Point(319, 149);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(187, 13);
             this.label10.TabIndex = 10;
@@ -164,7 +164,7 @@ namespace CADPhoneCaseUI
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(374, 179);
+            this.label11.Location = new System.Drawing.Point(306, 172);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(200, 26);
             this.label11.TabIndex = 11;
@@ -173,7 +173,7 @@ namespace CADPhoneCaseUI
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(374, 74);
+            this.label12.Location = new System.Drawing.Point(300, 67);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(206, 13);
             this.label12.TabIndex = 12;
@@ -182,7 +182,7 @@ namespace CADPhoneCaseUI
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(374, 100);
+            this.label13.Location = new System.Drawing.Point(299, 93);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(207, 13);
             this.label13.TabIndex = 13;
@@ -191,7 +191,7 @@ namespace CADPhoneCaseUI
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(374, 123);
+            this.label14.Location = new System.Drawing.Point(286, 116);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(220, 26);
             this.label14.TabIndex = 14;
@@ -199,7 +199,7 @@ namespace CADPhoneCaseUI
             // 
             // CaseLengthTextBox
             // 
-            this.CaseLengthTextBox.Location = new System.Drawing.Point(12, 19);
+            this.CaseLengthTextBox.Location = new System.Drawing.Point(188, 12);
             this.CaseLengthTextBox.Name = "CaseLengthTextBox";
             this.CaseLengthTextBox.Size = new System.Drawing.Size(70, 20);
             this.CaseLengthTextBox.TabIndex = 1;
@@ -208,7 +208,7 @@ namespace CADPhoneCaseUI
             // 
             // CaseWidthTextBox
             // 
-            this.CaseWidthTextBox.Location = new System.Drawing.Point(12, 45);
+            this.CaseWidthTextBox.Location = new System.Drawing.Point(188, 38);
             this.CaseWidthTextBox.Name = "CaseWidthTextBox";
             this.CaseWidthTextBox.Size = new System.Drawing.Size(70, 20);
             this.CaseWidthTextBox.TabIndex = 2;
@@ -217,7 +217,7 @@ namespace CADPhoneCaseUI
             // 
             // CaseHeightTextBox
             // 
-            this.CaseHeightTextBox.Location = new System.Drawing.Point(12, 71);
+            this.CaseHeightTextBox.Location = new System.Drawing.Point(188, 64);
             this.CaseHeightTextBox.Name = "CaseHeightTextBox";
             this.CaseHeightTextBox.Size = new System.Drawing.Size(70, 20);
             this.CaseHeightTextBox.TabIndex = 3;
@@ -226,7 +226,7 @@ namespace CADPhoneCaseUI
             // 
             // CameraHoleWidthTextBox
             // 
-            this.CameraHoleWidthTextBox.Location = new System.Drawing.Point(12, 97);
+            this.CameraHoleWidthTextBox.Location = new System.Drawing.Point(188, 90);
             this.CameraHoleWidthTextBox.Name = "CameraHoleWidthTextBox";
             this.CameraHoleWidthTextBox.Size = new System.Drawing.Size(70, 20);
             this.CameraHoleWidthTextBox.TabIndex = 4;
@@ -235,7 +235,7 @@ namespace CADPhoneCaseUI
             // 
             // CameraHoleLengthTextBox
             // 
-            this.CameraHoleLengthTextBox.Location = new System.Drawing.Point(12, 123);
+            this.CameraHoleLengthTextBox.Location = new System.Drawing.Point(188, 116);
             this.CameraHoleLengthTextBox.Name = "CameraHoleLengthTextBox";
             this.CameraHoleLengthTextBox.Size = new System.Drawing.Size(70, 20);
             this.CameraHoleLengthTextBox.TabIndex = 5;
@@ -244,7 +244,7 @@ namespace CADPhoneCaseUI
             // 
             // CameraRightGapTextBox
             // 
-            this.CameraRightGapTextBox.Location = new System.Drawing.Point(12, 149);
+            this.CameraRightGapTextBox.Location = new System.Drawing.Point(188, 142);
             this.CameraRightGapTextBox.Name = "CameraRightGapTextBox";
             this.CameraRightGapTextBox.Size = new System.Drawing.Size(70, 20);
             this.CameraRightGapTextBox.TabIndex = 6;
@@ -253,7 +253,7 @@ namespace CADPhoneCaseUI
             // 
             // CameraTopGapTextBox
             // 
-            this.CameraTopGapTextBox.Location = new System.Drawing.Point(12, 179);
+            this.CameraTopGapTextBox.Location = new System.Drawing.Point(188, 172);
             this.CameraTopGapTextBox.Name = "CameraTopGapTextBox";
             this.CameraTopGapTextBox.Size = new System.Drawing.Size(70, 20);
             this.CameraTopGapTextBox.TabIndex = 7;
@@ -262,7 +262,7 @@ namespace CADPhoneCaseUI
             // 
             // ChargerHoleWidthTextBox
             // 
-            this.ChargerHoleWidthTextBox.Location = new System.Drawing.Point(298, 19);
+            this.ChargerHoleWidthTextBox.Location = new System.Drawing.Point(512, 12);
             this.ChargerHoleWidthTextBox.Name = "ChargerHoleWidthTextBox";
             this.ChargerHoleWidthTextBox.Size = new System.Drawing.Size(70, 20);
             this.ChargerHoleWidthTextBox.TabIndex = 8;
@@ -271,7 +271,7 @@ namespace CADPhoneCaseUI
             // 
             // ChargerHoleHeightTextBox
             // 
-            this.ChargerHoleHeightTextBox.Location = new System.Drawing.Point(298, 45);
+            this.ChargerHoleHeightTextBox.Location = new System.Drawing.Point(512, 38);
             this.ChargerHoleHeightTextBox.Name = "ChargerHoleHeightTextBox";
             this.ChargerHoleHeightTextBox.Size = new System.Drawing.Size(70, 20);
             this.ChargerHoleHeightTextBox.TabIndex = 9;
@@ -280,7 +280,7 @@ namespace CADPhoneCaseUI
             // 
             // MiniJackDiameterTextBox
             // 
-            this.MiniJackDiameterTextBox.Location = new System.Drawing.Point(298, 153);
+            this.MiniJackDiameterTextBox.Location = new System.Drawing.Point(512, 146);
             this.MiniJackDiameterTextBox.Name = "MiniJackDiameterTextBox";
             this.MiniJackDiameterTextBox.Size = new System.Drawing.Size(70, 20);
             this.MiniJackDiameterTextBox.TabIndex = 13;
@@ -289,7 +289,7 @@ namespace CADPhoneCaseUI
             // 
             // MiniJackGapTextBox
             // 
-            this.MiniJackGapTextBox.Location = new System.Drawing.Point(298, 179);
+            this.MiniJackGapTextBox.Location = new System.Drawing.Point(512, 172);
             this.MiniJackGapTextBox.Name = "MiniJackGapTextBox";
             this.MiniJackGapTextBox.Size = new System.Drawing.Size(70, 20);
             this.MiniJackGapTextBox.TabIndex = 14;
@@ -298,7 +298,7 @@ namespace CADPhoneCaseUI
             // 
             // SideButtonsHoleHeightTextBox
             // 
-            this.SideButtonsHoleHeightTextBox.Location = new System.Drawing.Point(298, 71);
+            this.SideButtonsHoleHeightTextBox.Location = new System.Drawing.Point(512, 64);
             this.SideButtonsHoleHeightTextBox.Name = "SideButtonsHoleHeightTextBox";
             this.SideButtonsHoleHeightTextBox.Size = new System.Drawing.Size(70, 20);
             this.SideButtonsHoleHeightTextBox.TabIndex = 10;
@@ -307,7 +307,7 @@ namespace CADPhoneCaseUI
             // 
             // SideButtonsHoleWidthTextBox
             // 
-            this.SideButtonsHoleWidthTextBox.Location = new System.Drawing.Point(298, 97);
+            this.SideButtonsHoleWidthTextBox.Location = new System.Drawing.Point(512, 90);
             this.SideButtonsHoleWidthTextBox.Name = "SideButtonsHoleWidthTextBox";
             this.SideButtonsHoleWidthTextBox.Size = new System.Drawing.Size(70, 20);
             this.SideButtonsHoleWidthTextBox.TabIndex = 11;
@@ -316,7 +316,7 @@ namespace CADPhoneCaseUI
             // 
             // SideButtonsGapTextBox
             // 
-            this.SideButtonsGapTextBox.Location = new System.Drawing.Point(298, 123);
+            this.SideButtonsGapTextBox.Location = new System.Drawing.Point(512, 116);
             this.SideButtonsGapTextBox.Name = "SideButtonsGapTextBox";
             this.SideButtonsGapTextBox.Size = new System.Drawing.Size(70, 20);
             this.SideButtonsGapTextBox.TabIndex = 12;

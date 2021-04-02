@@ -18,14 +18,32 @@ namespace CADPhoneCase
         /// </summary>
         public void OpenKompas()
         {
-            if (Kompas == null)
+            try
             {
-                var type = Type.GetTypeFromProgID("KOMPAS.Application.5");
-                Kompas = (KompasObject)Activator.CreateInstance(type);
+                Kompas = null;
+                if (Kompas == null)
+                {
+                    var type = Type.GetTypeFromProgID("KOMPAS.Application.5");
+                    Kompas = (KompasObject) Activator.CreateInstance(type);
+                }
+
+                if (Kompas == null) return;
+                Kompas.Visible = true;
+                Kompas.ActivateControllerAPI();
             }
-            if (Kompas == null) return;
-            Kompas.Visible = true;
-            Kompas.ActivateControllerAPI();
+            catch
+            {
+                Kompas = null;
+                if (Kompas == null)
+                {
+                    var type = Type.GetTypeFromProgID("KOMPAS.Application.5");
+                    Kompas = (KompasObject)Activator.CreateInstance(type);
+                }
+
+                if (Kompas == null) return;
+                Kompas.Visible = true;
+                Kompas.ActivateControllerAPI();
+            }
         }
     }
 }

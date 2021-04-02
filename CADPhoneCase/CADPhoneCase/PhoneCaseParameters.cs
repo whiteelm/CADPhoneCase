@@ -95,8 +95,11 @@ namespace CADPhoneCase
         /// <param name="sideButtonsHoleHeight">Высота отверстия для боковых кнопок.</param>
         /// <param name="sideButtonsHoleWidth">Ширина отверстия для боковых кнопок.</param>
         /// <param name="sideButtonsGap">Зазор между отверстием для боковых кнопок и верхним правым углом.</param>
-        public PhoneCaseParameters(double caseLength, double caseWidth, double caseHeight, double cameraHoleWidth, double cameraHoleLength, double cameraRightGap, double cameraTopGap, 
-            double chargerHoleWidth, double chargerHoleHeight, double miniJackDiameter, double miniJackGap, double sideButtonsHoleHeight, double sideButtonsHoleWidth, double sideButtonsGap)
+        public PhoneCaseParameters(double caseLength, double caseWidth, double caseHeight, 
+            double cameraHoleWidth, double cameraHoleLength, double cameraRightGap, double cameraTopGap, 
+            double chargerHoleWidth, double chargerHoleHeight, double miniJackDiameter, 
+            double miniJackGap, double sideButtonsHoleHeight, double sideButtonsHoleWidth, 
+            double sideButtonsGap)
         {
             CaseLength = caseLength;
             CaseWidth = caseWidth;
@@ -113,142 +116,56 @@ namespace CADPhoneCase
             SideButtonsHoleWidth = sideButtonsHoleWidth;
             SideButtonsGap = sideButtonsGap;
             TypeValidation();
-            ValueValidation();
-        }
-
-        /// <summary>
-        /// Валидация параметров по типу данных.
-        /// </summary>
-        private void TypeValidation()
-        {
-            var errorMessage = new List<string>();
-
-            CheckValue(errorMessage, CaseLength, "Длина чехла");
-            CheckValue(errorMessage, CaseWidth, "Ширина чехла");
-            CheckValue(errorMessage, CaseHeight, "Высота чехла");
-            CheckValue(errorMessage, CameraHoleWidth, "Ширина отверстия для камеры");
-            CheckValue(errorMessage, CameraHoleLength, "Длина отверстия для камеры");
-            CheckValue(errorMessage, CameraRightGap, "Зазор между отверстием для камеры и правой стенкой чехла");
-            CheckValue(errorMessage, CameraTopGap, "Зазор между отверстием для камеры и верхней стенкой чехла");
-            CheckValue(errorMessage, ChargerHoleWidth, "Ширина отверстия для зарядки");
-            CheckValue(errorMessage, ChargerHoleHeight, "Высота отверстия для зарядки");
-            CheckValue(errorMessage, MiniJackGap, "Зазор между отверстием для наушников и левой стенкой чехла");
-            CheckValue(errorMessage, MiniJackDiameter, "Диаметр отверстия для наушников");
-            CheckValue(errorMessage, SideButtonsHoleHeight, "Высота отверстия для боковых кнопок");
-            CheckValue(errorMessage, SideButtonsHoleWidth, "Ширина отверстия для боковых кнопок");
-            CheckValue(errorMessage, SideButtonsGap, "Зазор между отверстием для боковых кнопок и верхним правым углом");
-            if (errorMessage.Count > 0)
-            {
-                throw new ArgumentException(string.Join("\n", errorMessage));
-            }
-        }
-
-        /// <summary>
-        /// Проверка значения на NaN и Infinity.
-        /// </summary>
-        /// <param name="errorList">Список ошибок.</param>
-        /// <param name="value">Значение.</param>
-        /// <param name="name">Название параметра.</param>
-        private void CheckValue(List<string> errorList, double value, string name)
-        {
-            if (double.IsNaN(value) || double.IsInfinity(value))
-            {
-                errorList.Add($"{name} не должно быть бесконечным или несуществующим.\n");
-            }
         }
 
         /// <summary>
         /// Валидация параметров по диапазону значения.
         /// </summary>
-        private void ValueValidation()
+        private void TypeValidation()
         {
             var errorMessage = new List<string>();
 
-            if (CaseLength < 100 || CaseLength > 500)
-            {
-                errorMessage.Add("Длина чехла должна быть не меньше 100 мм " +
-                                 "и не больше 500 мм");
-            }
-
-            if (CaseWidth < 100 || CaseWidth > 400)
-            {
-                errorMessage.Add("Ширина чехла должна быть не меньше 100 мм " +
-                                 "и не больше 400 мм");
-            }
-
-            if (CaseHeight < 10 || CaseHeight > 20)
-            {
-                errorMessage.Add("Высота чехла должна быть не меньше 10 мм " +
-                                 "и не больше 20 мм");
-            }
-
-            if (CameraHoleWidth < 10 || CameraHoleWidth > 50)
-            {
-                errorMessage.Add("Ширина отверстия для камеры должна быть " +
-                                 "не меньше 10 мм и не больше 50 мм");
-            }
-
-            if (CameraHoleLength < 10 || CameraHoleLength > 50)
-            {
-                errorMessage.Add("Длина отверстия для камеры должна быть " +
-                                 "не меньше 10 мм и не больше 50 мм");
-            }
-
-            if (CameraRightGap < 5 || CameraRightGap > 20)
-            {
-                errorMessage.Add("Зазор между отверстием для камеры и " +
-                                 "правой стенкой чехла должна быть " + 
-                                 " не меньше 5 мм и не больше 20 мм");
-            }
-
-            if (CameraTopGap < 5 || CameraTopGap > 20)
-            {
-                errorMessage.Add("Зазор между отверстием для камеры и " +
-                                 "верхней стенкой чехла должна быть " +
-                                 " не меньше 5 мм и не больше 20 мм");
-            }
-
-            if (ChargerHoleWidth < 10 || ChargerHoleWidth > 20)
-            {
-                errorMessage.Add("Ширина отверстия для зарядки должна быть " +
-                                 "не меньше 10 мм и не больше 20 мм");
-            }
-
-            if (ChargerHoleHeight < 3 || ChargerHoleHeight > 6)
-            {
-                errorMessage.Add("Высота отверстия для зарядки должна быть " +
-                                 "не меньше 3 мм и не больше 6 мм");
-            }
-
-            if (SideButtonsHoleHeight < 2 || SideButtonsHoleHeight > CaseHeight - 2)
-            {
-                errorMessage.Add("Высота отверстия для боковых кнопок " +
-                                 $"зарядки должна быть не меньше {CaseHeight - 2} мм");
-            }
-
-            if (SideButtonsHoleWidth < 5 || SideButtonsHoleWidth > CaseLength - SideButtonsGap - 20)
-            {
-                errorMessage.Add("Ширина отверстия для боковых кнопок " +
-                                 "должна быть не меньше 5 мм и не больше " +
-                                 $" {CaseLength - SideButtonsGap - 20} мм");
-            }
-
-            if (MiniJackDiameter < 3.5 || MiniJackDiameter > 6)
-            {
-                errorMessage.Add("Диаметр отверстия для наушников " +
-                                 "должна быть не меньше 3.5 мм и не больше 6 мм");
-            }
-
+            CheckValue(errorMessage, CaseLength, "Длина чехла", 100, 500);
+            CheckValue(errorMessage, CaseWidth, "Ширина чехла", 100, 400);
+            CheckValue(errorMessage, CaseHeight,"Высота чехла", 10, 20);
+            CheckValue(errorMessage, CameraHoleWidth,"Ширина отверстия для камеры", 10, 50);
+            CheckValue(errorMessage, CameraHoleLength,"Длина отверстия для камеры", 10, 50);
+            CheckValue(errorMessage, CameraRightGap, "Зазор между отверстием для камеры и правой стенкой чехла", 
+                5, 20);
+            CheckValue(errorMessage, CameraTopGap,"Зазор между отверстием для камеры и верхней стенкой чехла", 
+                5, 20);
+            CheckValue(errorMessage, ChargerHoleWidth,"Ширина отверстия для зарядки", 10, 20);
+            CheckValue(errorMessage, ChargerHoleHeight,"Высота отверстия для зарядки", 3, 6);
             var s = CaseWidth / 2 - MiniJackDiameter / 2 - ChargerHoleWidth / 2 - 5;
-            if (MiniJackGap < 2 || MiniJackGap > s)
-            {
-                errorMessage.Add("Зазор между отверстием для наушников и левой стенкой чехла " +
-                                 $"должна быть не меньше половины диаметра + 2 мм и не больше {s} мм");
-            }
+            CheckValue(errorMessage, MiniJackGap,"Зазор между отверстием для наушников и левой стенкой чехла", 
+                2, s);
+            CheckValue(errorMessage, MiniJackDiameter,"Диаметр отверстия для наушников", 3.5, 6);
+            CheckValue(errorMessage, SideButtonsHoleHeight,"Высота отверстия для боковых кнопок", 2, CaseHeight - 2);
+            CheckValue(errorMessage, SideButtonsHoleWidth,"Ширина отверстия для боковых кнопок", 
+                5, CaseLength - SideButtonsGap - 20);
+            CheckValue(errorMessage, SideButtonsGap,"Зазор между отверстием для боковых кнопок и верхним правым углом",
+                5, 20);
 
             if (errorMessage.Count > 0)
             {
                 throw new ArgumentException(string.Join("\n", errorMessage));
+            }
+        }
+
+        /// <summary>
+        /// Заполнения списка исключений.
+        /// </summary>
+        /// <param name="errorList">Список ошибок.</param>
+        /// <param name="value">Значение.</param>
+        /// <param name="name">Название параметра.</param>
+        /// <param name="min">Минимальный размер.</param>
+        /// <param name="max">Максимальный размер.</param>
+        private static void CheckValue(ICollection<string> errorList, double value, string name, 
+            double min, double max)
+        {
+            if (value < min || value > max)
+            {
+                errorList.Add($"{name} не может быть меньше {min} или больше {max}.\n");
             }
         }
     }
