@@ -20,7 +20,6 @@ namespace CADPhoneCase
         {
             try
             {
-                Kompas = null;
                 if (Kompas == null)
                 {
                     var type = Type.GetTypeFromProgID("KOMPAS.Application.5");

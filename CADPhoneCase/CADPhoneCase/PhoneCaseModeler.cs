@@ -39,7 +39,7 @@ namespace CADPhoneCase
             CreateChargerHole(parameters.ChargerHoleWidth, parameters.ChargerHoleHeight, parameters.CaseLength,
                 parameters.CaseWidth, centerHeight);
         }
-        
+
         /// <summary>
         /// Создание основы чехла.
         /// </summary>
@@ -100,12 +100,25 @@ namespace CADPhoneCase
             var offsetPlaneXoz = CreateOffsetPlaneXoz(caseLength);
             DrawCircle(caseWidth - jackGap, centerHeight, jackDiameter, offsetPlaneXoz);
             MakeCutExtrude(_entitySketch, (short)Direction_Type.dtNormal);
-            //Создание отверстия для зарядки
-            DrawRectangle(chargerHoleHeight, chargerHoleWidth, -chargerHoleWidth/2 + caseWidth / 2, 
-                centerHeight - chargerHoleHeight/2, offsetPlaneXOZ);
-            MakeCutExtrude(_entitySketch, (short)Direction_Type.dtNormal);
         }
 
+        /// <summary>
+        /// Создание отверстия для зарядки.
+        /// </summary>
+        /// <param name="chargerHoleWidth">Ширина отверстия для зарядки.</param>
+        /// <param name="chargerHoleHeight">Высота отверстия для зарядки.</param>
+        /// <param name="caseLength">Длина чехла.</param>
+        /// <param name="caseWidth">Ширина чехла.</param>
+        /// <param name="centerHeight">Середина высоты чехла.</param>
+        
+        private void CreateChargerHole(double chargerHoleWidth, double chargerHoleHeight, double caseLength,
+            double caseWidth, double centerHeight)
+        {
+            var offsetPlaneXoz = CreateOffsetPlaneXoz(caseLength);
+            DrawRectangle(chargerHoleHeight, chargerHoleWidth, -chargerHoleWidth / 2 + caseWidth / 2,
+                centerHeight - chargerHoleHeight / 2, offsetPlaneXoz);
+            MakeCutExtrude(_entitySketch, (short)Direction_Type.dtNormal);
+        }
         /// <summary>
         /// Создать эскиз.
         /// </summary>
