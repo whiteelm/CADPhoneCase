@@ -1,8 +1,9 @@
-﻿using Kompas6API5;
+﻿using CADPhoneCase;
+using Kompas6API5;
 using Kompas6Constants;
 using Kompas6Constants3D;
 
-namespace CADPhoneCase
+namespace KompasInteractor
 {
     /// <summary>
     /// Создание модели.

@@ -149,6 +149,10 @@
       <Project>{88d02c34-05d2-44ea-bf15-77bd303d9181}</Project>
       <Name>CADPhoneCase</Name>
     </ProjectReference>
+    <ProjectReference Include="..\KompasInteractor\KompasInteractor.csproj">
+      <Project>{1d9b1c8e-3524-4e3b-b102-67b8f113b566}</Project>
+      <Name>KompasInteractor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

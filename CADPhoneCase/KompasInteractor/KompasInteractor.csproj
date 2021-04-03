@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{88D02C34-05D2-44EA-BF15-77BD303D9181}</ProjectGuid>
+    <ProjectGuid>{1D9B1C8E-3524-4E3B-B102-67B8F113B566}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CADPhoneCase</RootNamespace>
-    <AssemblyName>CADPhoneCase</AssemblyName>
+    <RootNamespace>KompasInteractor</RootNamespace>
+    <AssemblyName>KompasInteractor</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,7 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PhoneCaseParameters.cs" />
+    <Compile Include="KompasConnector.cs" />
+    <Compile Include="PhoneCaseModeler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -108,6 +109,12 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CADPhoneCase\CADPhoneCase.csproj">
+      <Project>{88d02c34-05d2-44ea-bf15-77bd303d9181}</Project>
+      <Name>CADPhoneCase</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,12 +1,12 @@
 ﻿using System;
 using Kompas6API5;
 
-namespace CADPhoneCase
+namespace KompasInteractor
 {
     /// <summary>
     /// Подключение к компасу.
     /// </summary>
-    public class KompasInteractor
+    public class KompasConnector
     {
         /// <summary>
         /// Интерфейс API КОМПАС 3D.
