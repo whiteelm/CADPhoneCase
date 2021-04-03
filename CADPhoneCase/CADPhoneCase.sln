@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CADPhoneCaseUI", "CADPhoneC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CADPhoneCase", "CADPhoneCase\CADPhoneCase.csproj", "{88D02C34-05D2-44EA-BF15-77BD303D9181}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CADPhoneCaseTests", "CADPhoneCaseTests", "{BC1EEFD5-C6E8-4B7A-81AD-2805EF932F00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
