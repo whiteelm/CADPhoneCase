@@ -88,126 +88,126 @@ namespace CADPhoneCaseUI
             this.label1.Location = new System.Drawing.Point(6, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 13);
+            this.label1.Size = new System.Drawing.Size(96, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Длина чехла";
+            this.label1.Text = "Длина чехла (мм)";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 46);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 13);
+            this.label2.Size = new System.Drawing.Size(102, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Ширина чехла";
+            this.label2.Text = "Ширина чехла (мм)";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 72);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.Size = new System.Drawing.Size(101, 13);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Высота чехла";
+            this.label3.Text = "Высота чехла (мм)";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(11, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 13);
+            this.label4.Size = new System.Drawing.Size(190, 13);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Ширина отверстия для камеры";
+            this.label4.Text = "Ширина отверстия для камеры (мм)";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(11, 48);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(159, 13);
+            this.label5.Size = new System.Drawing.Size(184, 13);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Длина отверстия для камеры";
+            this.label5.Text = "Длина отверстия для камеры (мм)";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(11, 71);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(170, 26);
+            this.label6.Size = new System.Drawing.Size(204, 26);
             this.label6.TabIndex = 6;
-            this.label6.Text = "Зазор между отверстием для \r\nкамеры и правой стенкой чехла";
+            this.label6.Text = "Зазор между отверстием для камеры \r\nи правой стенкой чехла (мм)";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(11, 100);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(175, 26);
+            this.label7.Size = new System.Drawing.Size(204, 26);
             this.label7.TabIndex = 7;
-            this.label7.Text = "Зазор между отверстием для \r\nкамеры и верхней стенкой чехла";
+            this.label7.Text = "Зазор между отверстием для камеры \r\nи верхней стенкой чехла (мм)";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(6, 16);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(167, 13);
+            this.label8.Size = new System.Drawing.Size(192, 13);
             this.label8.TabIndex = 8;
-            this.label8.Text = "Ширина отверстия для зарядки";
+            this.label8.Text = "Ширина отверстия для зарядки (мм)";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(6, 42);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(166, 13);
+            this.label9.Size = new System.Drawing.Size(191, 13);
             this.label9.TabIndex = 9;
-            this.label9.Text = "Высота отверстия для зарядки";
+            this.label9.Text = "Высота отверстия для зарядки (мм)";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(6, 22);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(187, 13);
+            this.label10.Size = new System.Drawing.Size(212, 13);
             this.label10.TabIndex = 10;
-            this.label10.Text = "Диаметр отверстия для наушников";
+            this.label10.Text = "Диаметр отверстия для наушников (мм)";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(6, 48);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(200, 26);
+            this.label11.Size = new System.Drawing.Size(219, 26);
             this.label11.TabIndex = 11;
-            this.label11.Text = "Зазор между отверстием \r\nдля наушников и левой стенкой чехла";
+            this.label11.Text = "Зазор между отверстием для наушников \r\nи левой стенкой чехла (мм)";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(7, 22);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(206, 13);
+            this.label12.Size = new System.Drawing.Size(231, 13);
             this.label12.TabIndex = 12;
-            this.label12.Text = "Высота отверстия для боковых кнопок";
+            this.label12.Text = "Высота отверстия для боковых кнопок (мм)";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(7, 48);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(207, 13);
+            this.label13.Size = new System.Drawing.Size(232, 13);
             this.label13.TabIndex = 13;
-            this.label13.Text = "Ширина отверстия для боковых кнопок";
+            this.label13.Text = "Ширина отверстия для боковых кнопок (мм)";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(7, 74);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(220, 26);
+            this.label14.Size = new System.Drawing.Size(204, 26);
             this.label14.TabIndex = 14;
-            this.label14.Text = "Зазор между отверстием для \r\nбоковых кнопок и верхним правым углом";
+            this.label14.Text = "Зазор между отверстием для боковых\r\n кнопок и верхним правым углом (мм)";
             // 
             // CaseLengthTextBox
             // 
@@ -241,7 +241,7 @@ namespace CADPhoneCaseUI
             // 
             // CameraHoleWidthTextBox
             // 
-            this.CameraHoleWidthTextBox.Location = new System.Drawing.Point(232, 19);
+            this.CameraHoleWidthTextBox.Location = new System.Drawing.Point(244, 19);
             this.CameraHoleWidthTextBox.Name = "CameraHoleWidthTextBox";
             this.CameraHoleWidthTextBox.Size = new System.Drawing.Size(70, 20);
             this.CameraHoleWidthTextBox.TabIndex = 11;
@@ -251,7 +251,7 @@ namespace CADPhoneCaseUI
             // 
             // CameraHoleLengthTextBox
             // 
-            this.CameraHoleLengthTextBox.Location = new System.Drawing.Point(232, 45);
+            this.CameraHoleLengthTextBox.Location = new System.Drawing.Point(244, 45);
             this.CameraHoleLengthTextBox.Name = "CameraHoleLengthTextBox";
             this.CameraHoleLengthTextBox.Size = new System.Drawing.Size(70, 20);
             this.CameraHoleLengthTextBox.TabIndex = 12;
@@ -261,7 +261,7 @@ namespace CADPhoneCaseUI
             // 
             // CameraRightGapTextBox
             // 
-            this.CameraRightGapTextBox.Location = new System.Drawing.Point(232, 71);
+            this.CameraRightGapTextBox.Location = new System.Drawing.Point(244, 71);
             this.CameraRightGapTextBox.Name = "CameraRightGapTextBox";
             this.CameraRightGapTextBox.Size = new System.Drawing.Size(70, 20);
             this.CameraRightGapTextBox.TabIndex = 13;
@@ -271,7 +271,7 @@ namespace CADPhoneCaseUI
             // 
             // CameraTopGapTextBox
             // 
-            this.CameraTopGapTextBox.Location = new System.Drawing.Point(232, 97);
+            this.CameraTopGapTextBox.Location = new System.Drawing.Point(244, 97);
             this.CameraTopGapTextBox.Name = "CameraTopGapTextBox";
             this.CameraTopGapTextBox.Size = new System.Drawing.Size(70, 20);
             this.CameraTopGapTextBox.TabIndex = 14;
@@ -321,7 +321,7 @@ namespace CADPhoneCaseUI
             // 
             // SideButtonsHoleHeightTextBox
             // 
-            this.SideButtonsHoleHeightTextBox.Location = new System.Drawing.Point(232, 19);
+            this.SideButtonsHoleHeightTextBox.Location = new System.Drawing.Point(244, 17);
             this.SideButtonsHoleHeightTextBox.Name = "SideButtonsHoleHeightTextBox";
             this.SideButtonsHoleHeightTextBox.Size = new System.Drawing.Size(70, 20);
             this.SideButtonsHoleHeightTextBox.TabIndex = 8;
@@ -331,7 +331,7 @@ namespace CADPhoneCaseUI
             // 
             // SideButtonsHoleWidthTextBox
             // 
-            this.SideButtonsHoleWidthTextBox.Location = new System.Drawing.Point(232, 45);
+            this.SideButtonsHoleWidthTextBox.Location = new System.Drawing.Point(244, 43);
             this.SideButtonsHoleWidthTextBox.Name = "SideButtonsHoleWidthTextBox";
             this.SideButtonsHoleWidthTextBox.Size = new System.Drawing.Size(70, 20);
             this.SideButtonsHoleWidthTextBox.TabIndex = 9;
@@ -341,7 +341,7 @@ namespace CADPhoneCaseUI
             // 
             // SideButtonsGapTextBox
             // 
-            this.SideButtonsGapTextBox.Location = new System.Drawing.Point(232, 71);
+            this.SideButtonsGapTextBox.Location = new System.Drawing.Point(244, 69);
             this.SideButtonsGapTextBox.Name = "SideButtonsGapTextBox";
             this.SideButtonsGapTextBox.Size = new System.Drawing.Size(70, 20);
             this.SideButtonsGapTextBox.TabIndex = 10;
@@ -376,7 +376,7 @@ namespace CADPhoneCaseUI
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(325, 129);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(308, 135);
+            this.groupBox2.Size = new System.Drawing.Size(320, 135);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Размеры отверстия для камеры";
@@ -417,7 +417,7 @@ namespace CADPhoneCaseUI
             this.groupBox5.Controls.Add(this.label14);
             this.groupBox5.Location = new System.Drawing.Point(325, 12);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(308, 111);
+            this.groupBox5.Size = new System.Drawing.Size(320, 111);
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Размеры отверстия для боковых кнопок";
@@ -426,7 +426,7 @@ namespace CADPhoneCaseUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 299);
+            this.ClientSize = new System.Drawing.Size(657, 299);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
