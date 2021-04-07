@@ -6,7 +6,6 @@ namespace CADPhoneCase.UnitTests
     [TestFixture]
     public class PhoneCaseParametersTest
     {
-        
         [Test]
         public void CaseLength_GoodCaseLength_ReturnsSameCaseLength()
         {

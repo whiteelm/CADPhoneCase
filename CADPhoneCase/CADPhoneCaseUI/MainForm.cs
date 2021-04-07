@@ -8,9 +8,15 @@ namespace CADPhoneCaseUI
 {
     public partial class MainForm : Form
     {
-        private readonly PhoneCaseParameters _parameters;
+        /// <summary>
+        /// Экземпляр класса параметров.
+        /// </summary>
+        private PhoneCaseParameters _parameters;
 
-        private readonly KompasConnector _kompas;
+        /// <summary>
+        /// Экземпляр класса соединения с компасом.
+        /// </summary>
+        private KompasConnector _kompas;
 
         public MainForm()
         {
@@ -18,6 +24,7 @@ namespace CADPhoneCaseUI
             _kompas = new KompasConnector();
             _parameters = new PhoneCaseParameters();
         }
+
 
         private void CreateModelButton_Click(object sender, EventArgs e)
         {

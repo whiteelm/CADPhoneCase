@@ -179,11 +179,7 @@ namespace CADPhoneCase
                 _sideButtonsHoleWidth = value;
             }
         }
-        /// <summary>
-        /// Зазор между отверстием для боковых кнопок и верхним правым углом.
-        /// </summary>
-        private double _sideButtonsGap;
-
+        
         /// <summary>
         /// Зазор между отверстием для боковых кнопок и верхним правым углом
         /// должен быть не меньше 5 мм и не больше 20 мм.
@@ -278,5 +274,9 @@ namespace CADPhoneCase
         /// </summary>
         private double _sideButtonsHoleHeight;
 
+        /// <summary>
+        /// Зазор между отверстием для боковых кнопок и верхним правым углом.
+        /// </summary>
+        private double _sideButtonsGap;
     }
 }
