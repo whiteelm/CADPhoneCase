@@ -111,7 +111,6 @@ namespace KompasInteractor
         /// <param name="caseLength">Длина чехла.</param>
         /// <param name="caseWidth">Ширина чехла.</param>
         /// <param name="centerHeight">Середина высоты чехла.</param>
-        
         private void CreateChargerHole(double chargerHoleWidth, double chargerHoleHeight, double caseLength,
             double caseWidth, double centerHeight)
         {
@@ -120,6 +119,7 @@ namespace KompasInteractor
                 centerHeight - chargerHoleHeight / 2, offsetPlaneXoz);
             MakeCutExtrude(_entitySketch, (short)Direction_Type.dtNormal);
         }
+
         /// <summary>
         /// Создать эскиз.
         /// </summary>
@@ -261,6 +261,5 @@ namespace KompasInteractor
         ///  Указатель на эскиз.
         /// </summary>
         private ksDocument2D _sketchEdit;
-
     }
 }

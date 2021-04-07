@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace CADPhoneCase
 {
@@ -100,7 +99,6 @@ namespace CADPhoneCase
             }
         }
 
-        
         /// <summary>
         /// Ширина отверстия для зарядки должна быть не меньше 10 мм и не больше 20 мм.
         /// </summary>
@@ -141,8 +139,8 @@ namespace CADPhoneCase
         }
 
         /// <summary>
-        /// Зазор между отверстием для наушников и левой стенкой чехла должен быть не меньше 2 мм
-        /// и не больше половины ширины чехла минус половина диаметра минус пол ширины отверстия для зарядки минус 5 мм.
+        /// Зазор между отверстием для наушников и левой стенкой чехла должен быть не меньше 2 мм и не больше
+        /// половины ширины чехла минус половина диаметра минус пол ширины отверстия для зарядки минус 5 мм.
         /// </summary>
         public double MiniJackGap
         {
@@ -167,12 +165,7 @@ namespace CADPhoneCase
                 _sideButtonsHoleHeight = value;
             }
         }
-
-        /// <summary>
-        /// Ширина отверстия для боковых кнопок.
-        /// </summary>
-        private double _sideButtonsHoleWidth;
-
+        
         /// <summary>
         /// Ширина отверстия для боковых кнопок должна быть не меньше 5 мм и
         /// не больше длины чехла минус зазор боковых кнопок минус 20 мм.
@@ -244,6 +237,11 @@ namespace CADPhoneCase
         /// Высота отверстия для зарядки.
         /// </summary>
         private double _chargerHoleHeight;
+
+        /// <summary>
+        /// Ширина отверстия для боковых кнопок.
+        /// </summary>
+        private double _sideButtonsHoleWidth;
 
         /// <summary>
         /// Длина отверстия для камеры.

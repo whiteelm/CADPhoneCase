@@ -23,6 +23,11 @@ namespace CADPhoneCaseUI
         {
             CreatePhoneCase();
         }
+        
+        private void ValidateDoubleTextBoxs_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !Regex.IsMatch(e.KeyChar.ToString(), @"[\d\b,]");
+        }
 
         /// <summary>
         /// Создание модели чехла.
@@ -62,11 +67,6 @@ namespace CADPhoneCaseUI
             }
         }
         
-       private void ValidateDoubleTextBoxs_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !Regex.IsMatch(e.KeyChar.ToString(), @"[\d\b,]");
-        }
-        
         private void CaseLengthTextBox_Leave(object sender, EventArgs e)
         {
             try
@@ -78,10 +78,12 @@ namespace CADPhoneCaseUI
                 MessageBox.Show(@"Данные введены некоректно 
 Возможно есть пустые поля или лишние запятые",
                     @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CaseLengthTextBox.Focus();
             }
             catch (ArgumentException ex)
             {
                 MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CaseLengthTextBox.Focus();
             }
         }
 

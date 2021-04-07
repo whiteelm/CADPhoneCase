@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CADPhoneCaseTests", "CADPho
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KompasInteractor", "KompasInteractor\KompasInteractor.csproj", "{1D9B1C8E-3524-4E3B-B102-67B8F113B566}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CADPhoneCase.UnitTests", "CADPhoneCase.UnitTests\CADPhoneCase.UnitTests.csproj", "{13041E75-F4E0-4910-A0CA-EC25112FAE86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,9 +34,16 @@ Global
 		{1D9B1C8E-3524-4E3B-B102-67B8F113B566}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D9B1C8E-3524-4E3B-B102-67B8F113B566}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D9B1C8E-3524-4E3B-B102-67B8F113B566}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13041E75-F4E0-4910-A0CA-EC25112FAE86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13041E75-F4E0-4910-A0CA-EC25112FAE86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13041E75-F4E0-4910-A0CA-EC25112FAE86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13041E75-F4E0-4910-A0CA-EC25112FAE86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{13041E75-F4E0-4910-A0CA-EC25112FAE86} = {BC1EEFD5-C6E8-4B7A-81AD-2805EF932F00}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5577EE3A-5542-4A3A-9056-86183359CC85}
