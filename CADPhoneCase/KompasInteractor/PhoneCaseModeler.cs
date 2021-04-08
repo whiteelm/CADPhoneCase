@@ -115,7 +115,8 @@ namespace KompasInteractor
             double caseWidth, double centerHeight)
         {
             var offsetPlaneXoz = CreateOffsetPlaneXoz(caseLength);
-            DrawRectangle(chargerHoleHeight, chargerHoleWidth, -chargerHoleWidth / 2 + caseWidth / 2,
+            DrawRectangle(chargerHoleHeight, chargerHoleWidth, 
+                -chargerHoleWidth / 2 + caseWidth / 2,
                 centerHeight - chargerHoleHeight / 2, offsetPlaneXoz);
             MakeCutExtrude(_entitySketch, (short)Direction_Type.dtNormal);
         }

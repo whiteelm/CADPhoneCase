@@ -20,6 +20,7 @@ namespace KompasInteractor
         {
             try
             {
+                //TODO: Duplication
                 if (Kompas == null)
                 {
                     var type = Type.GetTypeFromProgID("KOMPAS.Application.5");
@@ -32,6 +33,7 @@ namespace KompasInteractor
             }
             catch
             {
+                //TODO: Duplication
                 Kompas = null;
                 if (Kompas == null)
                 {

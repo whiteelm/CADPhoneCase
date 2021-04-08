@@ -147,6 +147,7 @@ namespace CADPhoneCase
             get => _miniJackGap;
             set
             {
+                 //TODO: RSDN
                 var s = CaseWidth / 2 - MiniJackDiameter / 2 - ChargerHoleWidth / 2 - 5;
                 CheckValue(value, "Зазор между отверстием для наушников и левой стенкой чехла", 2, s);
                 _miniJackGap = value;
@@ -204,7 +205,8 @@ namespace CADPhoneCase
         private static void CheckValue(double value, string name, 
             double min, double max)
         {
-            if (!(value < min) && !(value > max)) return;
+            if (min <= value && value <= max) return;
+
             var message = $"{name} не может быть меньше {min} или больше {max}.\n";
             throw new ArgumentException(string.Join("\n", message));
         }

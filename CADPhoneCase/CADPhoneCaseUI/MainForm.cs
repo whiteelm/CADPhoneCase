@@ -182,6 +182,7 @@ namespace CADPhoneCaseUI
         {
             try
             {
+                //_parameters[_dictionary[sender]] = double.Parse(((TextBox) sender).Text);
                 _parameters.MiniJackDiameter = double.Parse(MiniJackDiameterTextBox.Text);
             }
             catch (FormatException)
