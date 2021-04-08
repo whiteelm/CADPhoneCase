@@ -105,10 +105,13 @@ namespace CADPhoneCaseUI
                 MessageBox.Show(@"Данные введены некоректно 
 Возможно есть пустые поля или лишние запятые",
                     @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CaseWidthTextBox.Focus();
             }
             catch (ArgumentException ex)
             {
-                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Warning);
+                CaseWidthTextBox.Focus();
             }
         }
 
@@ -123,10 +126,13 @@ namespace CADPhoneCaseUI
                 MessageBox.Show(@"Данные введены некоректно 
 Возможно есть пустые поля или лишние запятые",
                     @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CaseHeightTextBox.Focus();
             }
             catch (ArgumentException ex)
             {
-                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Warning);
+                CaseHeightTextBox.Focus();
             }
         }
 
@@ -141,10 +147,13 @@ namespace CADPhoneCaseUI
                 MessageBox.Show(@"Данные введены некоректно 
 Возможно есть пустые поля или лишние запятые",
                     @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ChargerHoleWidthTextBox.Focus();
             }
             catch (ArgumentException ex)
             {
-                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Warning);
+                ChargerHoleWidthTextBox.Focus();
             }
         }
 
@@ -159,10 +168,13 @@ namespace CADPhoneCaseUI
                 MessageBox.Show(@"Данные введены некоректно 
 Возможно есть пустые поля или лишние запятые",
                     @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ChargerHoleHeightTextBox.Focus();
             }
             catch (ArgumentException ex)
             {
-                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Warning);
+                ChargerHoleHeightTextBox.Focus();
             }
         }
 
@@ -177,10 +189,13 @@ namespace CADPhoneCaseUI
                 MessageBox.Show(@"Данные введены некоректно 
 Возможно есть пустые поля или лишние запятые",
                     @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MiniJackDiameterTextBox.Focus();
             }
             catch (ArgumentException ex)
             {
-                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Warning);
+                MiniJackDiameterTextBox.Focus();
             }
         }
 
@@ -195,10 +210,13 @@ namespace CADPhoneCaseUI
                 MessageBox.Show(@"Данные введены некоректно 
 Возможно есть пустые поля или лишние запятые",
                     @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MiniJackGapTextBox.Focus();
             }
             catch (ArgumentException ex)
             {
-                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Warning);
+                MiniJackGapTextBox.Focus();
             }
         }
 
@@ -213,10 +231,13 @@ namespace CADPhoneCaseUI
                 MessageBox.Show(@"Данные введены некоректно 
 Возможно есть пустые поля или лишние запятые",
                     @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                SideButtonsHoleHeightTextBox.Focus();
             }
             catch (ArgumentException ex)
             {
-                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Warning);
+                SideButtonsHoleHeightTextBox.Focus();
             }
         }
 
@@ -231,10 +252,13 @@ namespace CADPhoneCaseUI
                 MessageBox.Show(@"Данные введены некоректно 
 Возможно есть пустые поля или лишние запятые",
                     @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                SideButtonsHoleWidthTextBox.Focus();
             }
             catch (ArgumentException ex)
             {
-                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Warning);
+                SideButtonsHoleWidthTextBox.Focus();
             }
         }
 
@@ -249,10 +273,13 @@ namespace CADPhoneCaseUI
                 MessageBox.Show(@"Данные введены некоректно 
 Возможно есть пустые поля или лишние запятые",
                     @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                SideButtonsGapTextBox.Focus();
             }
             catch (ArgumentException ex)
             {
-                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Warning);
+                SideButtonsGapTextBox.Focus();
             }
         }
 
@@ -267,10 +294,13 @@ namespace CADPhoneCaseUI
                 MessageBox.Show(@"Данные введены некоректно 
 Возможно есть пустые поля или лишние запятые",
                     @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CameraHoleWidthTextBox.Focus();
             }
             catch (ArgumentException ex)
             {
-                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Warning);
+                CameraHoleWidthTextBox.Focus();
             }
         }
 
@@ -285,10 +315,13 @@ namespace CADPhoneCaseUI
                 MessageBox.Show(@"Данные введены некоректно 
 Возможно есть пустые поля или лишние запятые",
                     @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CameraHoleLengthTextBox.Focus();
             }
             catch (ArgumentException ex)
             {
-                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Warning);
+                CameraHoleLengthTextBox.Focus();
             }
         }
 
@@ -303,10 +336,13 @@ namespace CADPhoneCaseUI
                 MessageBox.Show(@"Данные введены некоректно 
 Возможно есть пустые поля или лишние запятые",
                     @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CameraRightGapTextBox.Focus();
             }
             catch (ArgumentException ex)
             {
-                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Warning);
+                CameraRightGapTextBox.Focus();
             }
         }
 
@@ -321,10 +357,13 @@ namespace CADPhoneCaseUI
                 MessageBox.Show(@"Данные введены некоректно 
 Возможно есть пустые поля или лишние запятые",
                     @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CameraTopGapTextBox.Focus();
             }
             catch (ArgumentException ex)
             {
-                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, @"Предупреждение", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Warning);
+                CameraTopGapTextBox.Focus();
             }
         }
     }
