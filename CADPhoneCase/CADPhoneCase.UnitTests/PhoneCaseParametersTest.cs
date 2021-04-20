@@ -38,6 +38,9 @@ namespace CADPhoneCase.UnitTests
         [TestCase(ParameterName.SideButtonsHoleHeight, 5,
             TestName = "Позитивный тест проверки SideButtonsHoleHeight в " +
                        "индексаторе")]
+        [TestCase(ParameterName.CaseHeight, 10,
+            TestName = "Негативный тест проверки SideButtonsHoleHeight в " +
+                       "индексаторе")]
         public void Indexer_CorrectValue_ReturnsSameValue
             (ParameterName name, double correctValue)
         {
