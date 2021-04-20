@@ -1,284 +1,106 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CADPhoneCase
 {
     /// <summary>
-    /// Размеры чехла.
+    /// Параметры чехла в виде списка.
     /// </summary>
     public class PhoneCaseParameters
     {
         /// <summary>
-        /// Длина чехла должна быть не меньше 100 мм и не больше 500 мм.
+        /// Список параметров.
         /// </summary>
-        public double CaseLength
+        private readonly List<Parameter> _parameters = new List<Parameter>
         {
-            get => _caseLength;
-            
-            set
-            {
-                CheckValue(value, "Длина чехла", 100, 500);
-                _caseLength = value;
-            }
-        }
-        
-        /// <summary>
-        /// Ширина чехла должна быть не меньше 100 мм и не больше 400 мм.
-        /// </summary>
-        public double CaseWidth 
-        { 
-            get => _caseWidth;
-            set
-            {
-                CheckValue(value, "Ширина чехла", 100, 400);
-                _caseWidth = value;
-            }
-        }
-        
-        /// <summary>
-        /// Высота чехла должна быть не меньше 10 мм и не больше 20 мм.
-        /// </summary>
-        public double CaseHeight 
-        { 
-            get => _caseHeight;
-            set
-            {
-                CheckValue(value, "Высота чехла", 10, 20);
-                _caseHeight = value;
-            }
-        }
+            new Parameter(200, ParameterName.CaseLength, 100, 
+                500, "Длина чехла "),
+            new Parameter(100, ParameterName.CaseWidth, 100, 
+                400, "Ширина чехла"),
+            new Parameter(15, ParameterName.CaseHeight, 10, 
+                20, "Высота чехла"),
+            new Parameter(20, ParameterName.CameraHoleWidth, 10, 
+                50, "Ширина отверстия для камеры"),
+            new Parameter(30, ParameterName.CameraHoleLength, 10, 
+                50, "Длина отверстия для камеры"),
+            new Parameter(20, ParameterName.CameraTopGap, 5, 20, 
+                "Зазор между отверстием для камеры и верхней стенкой чехла"),
+            new Parameter(20, ParameterName.CameraRightGap, 5, 
+                20, "Зазор между отверстием для камеры и правой" +
+                    " стенкой чехла "),
+            new Parameter(5, ParameterName.ChargerHoleHeight, 3, 
+                6, "Высота отверстия для зарядки"),
+            new Parameter(15, ParameterName.ChargerHoleWidth, 10,
+                20, "Ширина отверстия для зарядки"),
+            new Parameter(3.5, ParameterName.MiniJackDiameter, 3.5,
+                6, "Диаметр отверстия для наушников"),
+            new Parameter(20, ParameterName.MiniJackGap, 2, 400, 
+                "Зазор между отверстием для наушников и левой стенкой чехла"),
+            new Parameter(20, ParameterName.SideButtonsGap, 5, 
+                20, "Зазор между отверстием для боковых кнопок " +
+                    "и верхним правым углом"),
+            new Parameter(4, ParameterName.SideButtonsHoleHeight, 2, 
+                20, "Высота отверстия для боковых кнопок"),
+            new Parameter(30, ParameterName.SideButtonsHoleWidth, 
+                10, 500, "Ширина отверстия для боковых кнопок")
+        };
 
         /// <summary>
-        /// Ширина отверстия для камеры должна быть не меньше 10 мм и не больше 50 мм.
+        /// Индексатор.
         /// </summary>
-        public double CameraHoleWidth
+        /// <param name="parameterName">Имя параметра.</param>
+        /// <returns>Значение параметра.</returns>
+        public double this[ParameterName parameterName]
         {
-            get => _cameraHoleWidth;
+            get => GetParameter(parameterName).Value;
             set
             {
-                CheckValue(value, "Ширина отверстия для камеры", 10, 50);
-                _cameraHoleWidth = value;
-            }
-        }
-        
-        /// <summary>
-        /// Длина отверстия для камеры должна быть не меньше 10 мм и не больше 50 мм.
-        /// </summary>
-        public double CameraHoleLength 
-        { 
-            get => _cameraHoleLenght;
-            set
-            {
-                CheckValue(value, "Длина отверстия для камеры", 10, 50);
-                _cameraHoleLenght = value;
-            }
-        }
-        
-        /// <summary>
-        /// Зазор между отверстием для камеры и правой стенкой чехла должен быть не меньше 5 мм и не больше 20 мм.
-        /// </summary>
-        public double CameraRightGap 
-        { 
-            get => _cameraRightGap;
-            set
-            {
-                CheckValue(value, "Зазор между отверстием для камеры и правой стенкой чехла", 5, 20);
-                _cameraRightGap = value;
-            }
-        }
-
-        /// <summary>
-        /// Зазор между отверстием для камеры и верхней стенкой чехла должен быть не меньше 5 мм и не больше 20 мм.
-        /// </summary>
-        public double CameraTopGap
-        {
-            get => _cameraTopGap;
-            set
-            {
-                CheckValue(value, "Зазор между отверстием для камеры и верхней стенкой чехла", 5, 20);
-                _cameraTopGap = value;
+                double min = 0;
+                double max = 0;
+                var name = "";
+                switch (parameterName)
+                {
+                    case ParameterName.MiniJackGap:
+                        min = 2 + GetParameter(
+                            ParameterName.MiniJackDiameter).Value / 2;
+                        max = GetParameter(ParameterName.CaseWidth).Value /
+                            2 - GetParameter(ParameterName.MiniJackDiameter).Value /
+                            2 - GetParameter(ParameterName.ChargerHoleWidth).Value /
+                            2 - 5;
+                        name = "Зазор между отверстием для наушников " +
+                              "и левой стенкой чехла";
+                        break;
+                    case ParameterName.SideButtonsHoleHeight:
+                        min = 2;
+                        max = GetParameter(ParameterName.CaseHeight).Value - 2;
+                        name = "Высота отверстия для боковых кнопок";
+                        break;
+                    case ParameterName.SideButtonsHoleWidth:
+                        min = 5;
+                        max = GetParameter(ParameterName.CaseLength).Value -
+                              GetParameter(ParameterName.SideButtonsGap).Value -
+                              20;
+                        name = "Ширина отверстия для боковых кнопок";
+                        break;
+                }
+                if (name != "" && (value < min || value > max))
+                {
+                    throw new ArgumentException(
+                        $"{name} не может быть меньше {min} " +
+                        $"и не может быть больше {max}"
+                    );
+                }
+                GetParameter(parameterName).Value = value;
             }
         }
 
         /// <summary>
-        /// Ширина отверстия для зарядки должна быть не меньше 10 мм и не больше 20 мм.
+        /// Получение параметра по имени.
         /// </summary>
-        public double ChargerHoleWidth
-        {
-            get => _chargerHoleWidth;
-            set
-            {
-                CheckValue(value, "Ширина отверстия для зарядки", 10, 20);
-                _chargerHoleWidth = value;
-            }
-        }
-
-        /// <summary>
-        /// Высота отверстия для зарядки должна быть не меньше 3 мм и не больше 6 мм.
-        /// </summary>
-        public double ChargerHoleHeight
-        {
-            get => _chargerHoleHeight;
-            set
-            {
-                CheckValue(value, "Высота отверстия для зарядки", 3, 6);
-                _chargerHoleHeight = value;
-            }
-        }
-        
-        /// <summary>
-        /// Диаметр отверстия для наушников должен быть не меньше 3.5 мм и не больше 6 мм.
-        /// </summary>
-        public double MiniJackDiameter
-        {
-            get => _miniJackDiameter;
-            set
-            {
-                CheckValue(value, "Диаметр отверстия для наушников", 3.5, 6);
-                _miniJackDiameter = value;
-            }
-        }
-
-        /// <summary>
-        /// Зазор между отверстием для наушников и левой стенкой чехла должен быть не меньше 2 мм и не больше
-        /// половины ширины чехла минус половина диаметра минус пол ширины отверстия для зарядки минус 5 мм.
-        /// </summary>
-        public double MiniJackGap
-        {
-            get => _miniJackGap;
-            set
-            {
-                 //TODO: RSDN
-                var s = CaseWidth / 2 - MiniJackDiameter / 2 - ChargerHoleWidth / 2 - 5;
-                CheckValue(value, "Зазор между отверстием для наушников и левой стенкой чехла", 2, s);
-                _miniJackGap = value;
-            }
-        }
-
-        /// <summary>
-        /// Высота отверстия для боковых кнопок должна быть не меньше 2 мм и не больше высоты чехла минус 2 мм.
-        /// </summary>
-        public double SideButtonsHoleHeight
-        {
-            get => _sideButtonsHoleHeight;
-            set
-            {
-                CheckValue(value, "Высота отверстия для боковых кнопок", 2, CaseHeight - 2);
-                _sideButtonsHoleHeight = value;
-            }
-        }
-        
-        /// <summary>
-        /// Ширина отверстия для боковых кнопок должна быть не меньше 5 мм и
-        /// не больше длины чехла минус зазор боковых кнопок минус 20 мм.
-        /// </summary>
-        public double SideButtonsHoleWidth
-        {
-            get => _sideButtonsHoleWidth;
-            set
-            {
-                CheckValue(value, "Ширина отверстия для боковых кнопок", 5, CaseLength - SideButtonsGap - 20);
-                _sideButtonsHoleWidth = value;
-            }
-        }
-        
-        /// <summary>
-        /// Зазор между отверстием для боковых кнопок и верхним правым углом
-        /// должен быть не меньше 5 мм и не больше 20 мм.
-        /// </summary>
-        public double SideButtonsGap
-        {
-            get => _sideButtonsGap;
-            set
-            {
-                CheckValue(value, "Зазор между отверстием для боковых кнопок и верхним правым углом", 5, 20);
-                _sideButtonsGap = value;
-            }
-        }
-        
-        /// <summary>
-        /// Проверка исключений.
-        /// </summary>
-        /// <param name="value">Значение.</param>
-        /// <param name="name">Название параметра.</param>
-        /// <param name="min">Минимальный размер.</param>
-        /// <param name="max">Максимальный размер.</param>
-        private static void CheckValue(double value, string name, 
-            double min, double max)
-        {
-            if (min <= value && value <= max) return;
-
-            var message = $"{name} не может быть меньше {min} или больше {max}.\n";
-            throw new ArgumentException(string.Join("\n", message));
-        }
-
-        /// <summary>
-        /// Длина чехла.
-        /// </summary>
-        private double _caseLength;
-
-        /// <summary>
-        /// Ширина чехла.
-        /// </summary>
-        private double _caseWidth;
-
-        /// <summary>
-        /// Высота чехла.
-        /// </summary>
-        private double _caseHeight;
-
-        /// <summary>
-        /// Ширина отверстия для камеры.
-        /// </summary>
-        private double _cameraHoleWidth;
-
-        /// <summary>
-        /// Высота отверстия для зарядки.
-        /// </summary>
-        private double _chargerHoleHeight;
-
-        /// <summary>
-        /// Ширина отверстия для боковых кнопок.
-        /// </summary>
-        private double _sideButtonsHoleWidth;
-
-        /// <summary>
-        /// Длина отверстия для камеры.
-        /// </summary>
-        private double _cameraHoleLenght;
-
-        /// <summary>
-        /// Зазор между отверстием для камеры и правой стенкой чехла.
-        /// </summary>
-        private double _cameraRightGap;
-
-        /// <summary>
-        /// Зазор между отверстием для камеры и верхней стенкой чехла.
-        /// </summary>
-        private double _cameraTopGap;
-
-        /// <summary>
-        /// Ширина отверстия для зарядки.
-        /// </summary>
-        private double _chargerHoleWidth;
-
-        /// <summary>
-        /// Диаметр отверстия для наушников.
-        /// </summary>
-        private double _miniJackDiameter;
-
-        /// <summary>
-        /// Зазор между отверстием для наушников и левой стенкой чехла.
-        /// </summary>
-        private double _miniJackGap;
-
-        /// <summary>
-        /// Высота отверстия для боковых кнопок.
-        /// </summary>
-        private double _sideButtonsHoleHeight;
-
-        /// <summary>
-        /// Зазор между отверстием для боковых кнопок и верхним правым углом.
-        /// </summary>
-        private double _sideButtonsGap;
+        /// <param name="parameterName">Имя параметра.</param>
+        /// <returns>Параметр.</returns>
+        private Parameter GetParameter(ParameterName parameterName) =>
+            _parameters.Find((parameter) => parameter.Name.Equals(
+                parameterName));
     }
 }

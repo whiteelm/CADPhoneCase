@@ -217,7 +217,7 @@ namespace CADPhoneCaseUI
             this.CaseLengthTextBox.TabIndex = 1;
             this.CaseLengthTextBox.Text = "200";
             this.CaseLengthTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
-            this.CaseLengthTextBox.Leave += new System.EventHandler(this.CaseLengthTextBox_Leave);
+            this.CaseLengthTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // CaseWidthTextBox
             // 
@@ -227,7 +227,7 @@ namespace CADPhoneCaseUI
             this.CaseWidthTextBox.TabIndex = 2;
             this.CaseWidthTextBox.Text = "100";
             this.CaseWidthTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
-            this.CaseWidthTextBox.Leave += new System.EventHandler(this.CaseWidthTextBox_Leave);
+            this.CaseWidthTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // CaseHeightTextBox
             // 
@@ -237,7 +237,7 @@ namespace CADPhoneCaseUI
             this.CaseHeightTextBox.TabIndex = 3;
             this.CaseHeightTextBox.Text = "15";
             this.CaseHeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
-            this.CaseHeightTextBox.Leave += new System.EventHandler(this.CaseHeightTextBox_Leave);
+            this.CaseHeightTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // CameraHoleWidthTextBox
             // 
@@ -245,9 +245,9 @@ namespace CADPhoneCaseUI
             this.CameraHoleWidthTextBox.Name = "CameraHoleWidthTextBox";
             this.CameraHoleWidthTextBox.Size = new System.Drawing.Size(70, 20);
             this.CameraHoleWidthTextBox.TabIndex = 11;
-            this.CameraHoleWidthTextBox.Text = "20";
+            this.CameraHoleWidthTextBox.Text = "30";
             this.CameraHoleWidthTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
-            this.CameraHoleWidthTextBox.Leave += new System.EventHandler(this.CameraHoleWidthTextBox_Leave);
+            this.CameraHoleWidthTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // CameraHoleLengthTextBox
             // 
@@ -255,9 +255,9 @@ namespace CADPhoneCaseUI
             this.CameraHoleLengthTextBox.Name = "CameraHoleLengthTextBox";
             this.CameraHoleLengthTextBox.Size = new System.Drawing.Size(70, 20);
             this.CameraHoleLengthTextBox.TabIndex = 12;
-            this.CameraHoleLengthTextBox.Text = "30";
+            this.CameraHoleLengthTextBox.Text = "20";
             this.CameraHoleLengthTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
-            this.CameraHoleLengthTextBox.Leave += new System.EventHandler(this.CameraHoleLengthTextBox_Leave);
+            this.CameraHoleLengthTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // CameraRightGapTextBox
             // 
@@ -267,7 +267,7 @@ namespace CADPhoneCaseUI
             this.CameraRightGapTextBox.TabIndex = 13;
             this.CameraRightGapTextBox.Text = "20";
             this.CameraRightGapTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
-            this.CameraRightGapTextBox.Leave += new System.EventHandler(this.CameraRightGapTextBox_Leave);
+            this.CameraRightGapTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // CameraTopGapTextBox
             // 
@@ -277,7 +277,7 @@ namespace CADPhoneCaseUI
             this.CameraTopGapTextBox.TabIndex = 14;
             this.CameraTopGapTextBox.Text = "20";
             this.CameraTopGapTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
-            this.CameraTopGapTextBox.Leave += new System.EventHandler(this.CameraTopGapTextBox_Leave);
+            this.CameraTopGapTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // ChargerHoleWidthTextBox
             // 
@@ -287,7 +287,7 @@ namespace CADPhoneCaseUI
             this.ChargerHoleWidthTextBox.TabIndex = 4;
             this.ChargerHoleWidthTextBox.Text = "15";
             this.ChargerHoleWidthTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
-            this.ChargerHoleWidthTextBox.Leave += new System.EventHandler(this.ChargerHoleWidthTextBox_Leave);
+            this.ChargerHoleWidthTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // ChargerHoleHeightTextBox
             // 
@@ -297,7 +297,7 @@ namespace CADPhoneCaseUI
             this.ChargerHoleHeightTextBox.TabIndex = 5;
             this.ChargerHoleHeightTextBox.Text = "5";
             this.ChargerHoleHeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
-            this.ChargerHoleHeightTextBox.Leave += new System.EventHandler(this.ChargerHoleHeightTextBox_Leave);
+            this.ChargerHoleHeightTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // MiniJackDiameterTextBox
             // 
@@ -307,7 +307,7 @@ namespace CADPhoneCaseUI
             this.MiniJackDiameterTextBox.TabIndex = 6;
             this.MiniJackDiameterTextBox.Text = "3,5";
             this.MiniJackDiameterTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
-            this.MiniJackDiameterTextBox.Leave += new System.EventHandler(this.MiniJackDiameterTextBox_Leave);
+            this.MiniJackDiameterTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // MiniJackGapTextBox
             // 
@@ -317,7 +317,7 @@ namespace CADPhoneCaseUI
             this.MiniJackGapTextBox.TabIndex = 7;
             this.MiniJackGapTextBox.Text = "20";
             this.MiniJackGapTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
-            this.MiniJackGapTextBox.Leave += new System.EventHandler(this.MiniJackGapTextBox_Leave);
+            this.MiniJackGapTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // SideButtonsHoleHeightTextBox
             // 
@@ -327,7 +327,7 @@ namespace CADPhoneCaseUI
             this.SideButtonsHoleHeightTextBox.TabIndex = 8;
             this.SideButtonsHoleHeightTextBox.Text = "4";
             this.SideButtonsHoleHeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
-            this.SideButtonsHoleHeightTextBox.Leave += new System.EventHandler(this.SideButtonsHoleHeightTextBox_Leave);
+            this.SideButtonsHoleHeightTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // SideButtonsHoleWidthTextBox
             // 
@@ -337,7 +337,7 @@ namespace CADPhoneCaseUI
             this.SideButtonsHoleWidthTextBox.TabIndex = 9;
             this.SideButtonsHoleWidthTextBox.Text = "30";
             this.SideButtonsHoleWidthTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
-            this.SideButtonsHoleWidthTextBox.Leave += new System.EventHandler(this.SideButtonsHoleWidthTextBox_Leave);
+            this.SideButtonsHoleWidthTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // SideButtonsGapTextBox
             // 
@@ -347,7 +347,7 @@ namespace CADPhoneCaseUI
             this.SideButtonsGapTextBox.TabIndex = 10;
             this.SideButtonsGapTextBox.Text = "20";
             this.SideButtonsGapTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateDoubleTextBoxs_KeyPress);
-            this.SideButtonsGapTextBox.Leave += new System.EventHandler(this.SideButtonsGapTextBox_Leave);
+            this.SideButtonsGapTextBox.Leave += new System.EventHandler(this.TextBox_Leave);
             // 
             // groupBox1
             // 
