@@ -42,8 +42,26 @@ namespace CADPhoneCase
             new Parameter(4, ParameterName.SideButtonsHoleHeight, 2, 
                 20, "Высота отверстия для боковых кнопок"),
             new Parameter(30, ParameterName.SideButtonsHoleWidth, 
-                10, 500, "Ширина отверстия для боковых кнопок")
+                5, 500, "Ширина отверстия для боковых кнопок")
         };
+
+        /// <summary>
+        /// Свойство надписи на задней стенке.
+        /// </summary>
+        public string Inscription
+        {
+            get => _inscription;
+            set
+            {
+                if (value.Length > 9)
+                {
+                    throw new ArgumentException(
+                        $"Надпись не может быть длиннее 9 символов"
+                    );
+                }
+                _inscription = value;
+            }
+        }
 
         /// <summary>
         /// Индексатор.
@@ -102,5 +120,10 @@ namespace CADPhoneCase
         private Parameter GetParameter(ParameterName parameterName) =>
             _parameters.Find((parameter) => parameter.Name.Equals(
                 parameterName));
+
+        /// <summary>
+        /// Надпись на задней стенке.
+        /// </summary>
+        private string _inscription;
     }
 }

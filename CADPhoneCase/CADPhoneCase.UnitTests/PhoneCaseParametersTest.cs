@@ -55,5 +55,36 @@ namespace CADPhoneCase.UnitTests
             //Assert
             Assert.AreEqual(expectedValue, actualValue);
         }
+
+        [TestCase("123456789", TestName = "Позитивный тест проверки Inscription")]
+        public void Inscription_CorrectValue_ReturnsSameValue(string correctText)
+        {
+            //Setup
+            var phoneCaseParameters = new PhoneCaseParameters();
+            var expectedValue = correctText;
+
+            //Act
+            phoneCaseParameters.Inscription = correctText;
+            var actualValue = phoneCaseParameters.Inscription;
+
+            //Assert
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+
+        [TestCase("12345678910", TestName = "Негативный тест проверки Inscription")]
+        public void Inscription_BadValue_ThrowsException(string wrongText)
+        {
+            //Setup
+            var phoneCaseParameters = new PhoneCaseParameters();
+
+            //Asset
+            Assert.Throws<ArgumentException>(
+                () =>
+                {
+                    //Act
+                    phoneCaseParameters.Inscription = wrongText;
+                });
+        }
+
     }
 }

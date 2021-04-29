@@ -19,9 +19,16 @@ namespace CADPhoneCaseUI
         /// </summary>
         private readonly KompasConnector _kompas;
 
+        /// <summary>
+        /// Словарь хранящий в себе имена параметров.
+        /// Ключами являются соответствующие текстбоксы.
+        /// </summary>
         private Dictionary<object, ParameterName> _dictionary =
             new Dictionary<object, ParameterName>();
 
+        /// <summary>
+        /// Инициализация данных.
+        /// </summary>
         public MainForm()
         {
             InitializeComponent();
@@ -88,6 +95,7 @@ namespace CADPhoneCaseUI
                     double.Parse(SideButtonsHoleWidthTextBox.Text);
                 _parameters[ParameterName.SideButtonsGap] =
                     double.Parse(SideButtonsGapTextBox.Text);
+                _parameters.Inscription = InscriptionTextBox.Text;
 
                 _kompas.OpenKompas();
                 var model = new PhoneCaseModeler(_kompas.Kompas);
@@ -106,6 +114,9 @@ namespace CADPhoneCaseUI
             }
         }
 
+        /// <summary>
+        /// Событие проверка значений текстбокса при выходе из него.
+        /// </summary>
         private void TextBox_Leave(object sender, EventArgs e)
         {
             try
@@ -129,16 +140,39 @@ namespace CADPhoneCaseUI
             }
         }
 
+        /// <summary>
+        /// Событие нажатия кнопки.
+        /// </summary>
         private void CreateModelButton_Click(object sender, EventArgs e)
         {
             CreatePhoneCase();
         }
 
+        /// <summary>
+        /// Событие ввода с клавиатуры в текстбокс.
+        /// </summary>
         private void ValidateDoubleTextBoxs_KeyPress(object sender,
             KeyPressEventArgs e)
         {
             e.Handled = !Regex.IsMatch(e.KeyChar.ToString(),
                 @"[\d\b,]");
+        }
+
+        /// <summary>
+        /// Событие проверка при выходе из InscriptionTextBox. 
+        /// </summary>
+        private void InscriptionTextBox_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                _parameters.Inscription = InscriptionTextBox.Text;
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, @"Предупреждение",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ((TextBox)sender).Focus();
+            }
         }
     }
 }

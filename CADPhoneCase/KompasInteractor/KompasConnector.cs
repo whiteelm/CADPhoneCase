@@ -43,7 +43,8 @@ namespace KompasInteractor
             kompas = null;
             try
             {
-                kompas = (KompasObject)Marshal.GetActiveObject(Api5Name);
+                kompas = (KompasObject)Marshal.GetActiveObject(
+                    "KOMPAS.Application.5");
                 return true;
             }
             catch (COMException)
@@ -61,7 +62,7 @@ namespace KompasInteractor
         {
             try
             {
-                var type = Type.GetTypeFromProgID(Api5Name);
+                var type = Type.GetTypeFromProgID("KOMPAS.Application.5");
                 kompas = (KompasObject)Activator.CreateInstance(type);
                 return true;
             }
@@ -71,10 +72,5 @@ namespace KompasInteractor
                 return false;
             }
         }
-
-        /// <summary>
-        /// Название точки входа в api5.
-        /// </summary>
-        private const string Api5Name = "KOMPAS.Application.5";
     }
 }

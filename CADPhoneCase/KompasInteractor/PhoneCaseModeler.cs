@@ -57,9 +57,13 @@ namespace KompasInteractor
                 parameters[ParameterName.CaseLength],
                 parameters[ParameterName.CaseWidth], centerHeight);
 
-            CreateInscription(
-                parameters[ParameterName.CaseWidth],
-                parameters[ParameterName.CaseLength]);
+            if(parameters.Inscription.Length > 0)
+            {
+                CreateInscription(
+                    parameters[ParameterName.CaseWidth],
+                    parameters[ParameterName.CaseLength],
+                    parameters.Inscription);
+            }
         }
 
         /// <summary>
@@ -158,15 +162,21 @@ namespace KompasInteractor
         /// <summary>
         /// Создание надписи на задней стороне.
         /// </summary>
-        private void CreateInscription(double caseWidth, double caseLength)
+        private void CreateInscription(double caseWidth, double caseLength, 
+            string str)
         {
             var currentPlane = (ksEntity)_part.GetDefaultEntity(
                 (short)Obj3dType.o3d_planeXOY);
             CreateSketch(currentPlane);
             _sketchEdit = (ksDocument2D)_sketchDefinition.BeginEdit();
-            _sketchEdit.ksText(caseWidth/2, caseLength/2, 180, -10, 
-                0, 0, "HONOR");
-
+            var x = caseWidth / 2;
+            var y = caseLength / 2;
+            var angle = 180;
+            var hStr = 10;
+            var text = _sketchEdit.ksText(x, y, angle, hStr,
+                0, 0, str);
+            _sketchEdit.ksSetTextAlign(text, 1);
+            _sketchEdit.ksSymmetryObj(0, x, y, x, 0, "0");
             _sketchDefinition.EndEdit();
             MakeCutExtrude(_entitySketch, (short)Direction_Type.dtReverse);
         }
@@ -256,7 +266,7 @@ namespace KompasInteractor
             newPlaneDefinition.direction = true;
             newPlaneDefinition.offset = offset;
             newPlane.Create();
-            newPlane.hidden = false;
+            newPlane.hidden = true;
             return newPlane;
         }
         
